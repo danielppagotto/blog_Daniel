@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>Contact</title>
+      <title>Contato</title>
       <link>https://danielppagotto.github.io/blog_Daniel_21_04/contact/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -98,12 +98,12 @@
     </item>
     
     <item>
-      <title>About</title>
+      <title>Sobre o autor</title>
       <link>https://danielppagotto.github.io/blog_Daniel_21_04/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://danielppagotto.github.io/blog_Daniel_21_04/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
+      <description>Olá! Meu nome é Daniel do Prado Pagotto! Sou mestre e bacharel em administração e sou encantado pela área de dados e estatística.</description>
     </item>
     
   </channel>

@@ -1,7 +1,11 @@
 title = "Daniel Pagotto"
 author = "Daniel Pagotto"
 #copyright = "2020-2021"
-description = "Análise de dados, empreendedorismo, inovação e gestão"
+description = """
+               Análise de dados, empreendedorismo, inovação e gestão
+               Pesquisador, professor e consultor em gestão
+               """
+
 profilePicture = "images/foto-daniel.jpg"
 keywords = ""
 # example ["css/custom.css"]

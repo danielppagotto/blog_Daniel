@@ -1,0 +1,177 @@
+---
+author: Daniel Pagotto
+date: "2021-04-21"
+description: Os Primeiros passos no R
+tags: ["R","Básico","Primeiros passos"]
+categories: ["R"]
+title: Os primeiros passos no R
+---
+
+
+
+<div id="nessa-aula-falaremos-sobre" class="section level3">
+<h3>Nessa aula falaremos sobre</h3>
+<ol style="list-style-type: decimal">
+<li>O R como umas calculadora</li>
+<li>Atribuições de variáveis</li>
+<li>Vetores, Matrizes e Dataframes</li>
+</ol>
+<p><strong>O R é uma linguagem de programação, em outras palavras, é o intérprete que vai permitir você conversar com o computador</strong>. Cada linha de script deve ser encarada como um comando que você fala: “R, executa tal coisa para mim?” (não, esquece de pedir por favor, seja educad@!).</p>
+<p>Então, como primeiro passo, vou falar para você que <strong>o R é calculadora</strong>, vamos fazer operações básicas nele? Insira as operações na tela de script e rode (basta apertar “ctrl + enter” com o cursor de digitação sobre a linha de comando).</p>
+<pre class="r"><code>5 + 4  # soma
+## [1] 9
+6 - 10 # subtração
+## [1] -4
+20 * 4 # multiplicação
+## [1] 80
+50 / 2 # divisão
+## [1] 25
+sqrt(25) # sqrt vem de SQuare RooT (raiz quadrada em inglês)
+## [1] 5
+5^2 # potenciação
+## [1] 25
+5 * (10 + (10/2)) # o R interpreta a ordem das operações igual você aprendeu lá na escola!
+## [1] 75
+                  # Você pode usar parênteses para controlar a ordem das operações</code></pre>
+</div>
+<div id="atribuição-de-variáveis" class="section level2">
+<h2>Atribuição de variáveis</h2>
+<p>Você pode guardar o valor em uma objeto para que possa usar em seguida. Veja bem, vou colocar meu peso em uma variável chamada “pesoDaniel”</p>
+<pre class="r"><code>pesoDaniel &lt;- 83
+pesoPosDieta &lt;- pesoDaniel - 4    # Um dia chego lá!</code></pre>
+<p>Note que posso atribuir valores de diferentes tipos, como numéricos, characteres (uma letra, por exemplo), fatores(uma palavra, traduzindo ao pé da letra) e booleanos (verdadeiro ou falso)</p>
+<pre class="r"><code>x &lt;- 5 + 5
+y &lt;- 10 - 16
+a &lt;- 9
+soma &lt;- a + x
+nome &lt;- &quot;daniel&quot; # isso é um factor
+certo &lt;- TRUE  # isso é um boolean</code></pre>
+<p>Perceba que as atribuições que você gerou foram armazenadas e encontram-se no campo “Environment” ao lado direito do RStudio.</p>
+<p>Vamos criar um programinha que calcula o <a href="https://www.tuasaude.com/imc/">Índice de Massa Corpórea (IMC)</a>. Para quem não lembra, basta dividir o peso pelo quadrado da altura.</p>
+<pre class="r"><code>pesoDaniel &lt;- 83
+alturaDaniel &lt;- 1.78  
+imcDaniel &lt;- pesoDaniel/alturaDaniel**2
+imcDaniel
+## [1] 26.19619</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Peso</th>
+<th align="center">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">&gt; 16</td>
+<td align="center">Subpeso severo</td>
+</tr>
+<tr class="even">
+<td align="center">16 a 19.9</td>
+<td align="center">Subpeso</td>
+</tr>
+<tr class="odd">
+<td align="center">20 a 24.9</td>
+<td align="center">Normal</td>
+</tr>
+<tr class="even">
+<td align="center">25 a 29.9</td>
+<td align="center">Sobrepeso</td>
+</tr>
+<tr class="odd">
+<td align="center">30 a 39.9</td>
+<td align="center">Obeso</td>
+</tr>
+<tr class="even">
+<td align="center">40 &gt;</td>
+<td align="center">Obeso mórbido</td>
+</tr>
+</tbody>
+</table>
+<p>Agora vamos fazer o IMC desse pessoa aqui embaixo:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Nome</th>
+<th align="center">Peso</th>
+<th align="center">Altura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alice</td>
+<td align="center">65</td>
+<td align="center">1.60</td>
+</tr>
+<tr class="even">
+<td align="center">Gilmar</td>
+<td align="center">95</td>
+<td align="center">1.78</td>
+</tr>
+<tr class="odd">
+<td align="center">Cecília</td>
+<td align="center">75</td>
+<td align="center">1.80</td>
+</tr>
+<tr class="even">
+<td align="center">Bianca</td>
+<td align="center">77</td>
+<td align="center">1.68</td>
+</tr>
+<tr class="odd">
+<td align="center">Valentina</td>
+<td align="center">80</td>
+<td align="center">1.72</td>
+</tr>
+<tr class="even">
+<td align="center">Augusto</td>
+<td align="center">68</td>
+<td align="center">1.68</td>
+</tr>
+</tbody>
+</table>
+<p>Aí você pode me perguntar: “Daniel, vou ter que fazer de um a um?”. Poderia, mas calma… Existem várias formas de resolver, mas para fins didáticos, vou apresentar uma estrutura de dados chamada <strong>vetor</strong>. O vetor é um conjunto de valores de um mesmo tipo (ex.: numérico, chacarcter). Dito isso, <strong>vamos criar um vetor de pesos e um vetor de alturas</strong>. Para criar um vetor, basta fazer como descrito abaixo.</p>
+<pre class="r"><code># trabalhando com vetores
+pesos &lt;- c(56, 95, 65, 77, 80, 68)
+alturas &lt;- c(1.60, 1.78, 1.80, 1.68, 1.72, 1.65)
+imc &lt;- pesos/alturas**2
+imc # aqui temos um vetor com o imc de todas pessoas
+## [1] 21.87500 29.98359 20.06173 27.28175 27.04164 24.97704</code></pre>
+<p>Vamos deixar isso mais bonitinho usando a função de arredondamento <strong>round</strong>? Nesse caso, coloquei no segundo argumento on número 2 para indicar que arredonde apenas duas casas decimais.</p>
+<pre class="r"><code>round(imc, 2)
+## [1] 21.87 29.98 20.06 27.28 27.04 24.98
+imc &lt;- round(imc, 2) #estou sobrescrevendo um vetor
+#arredondado sobre ele mesmo
+imc
+## [1] 21.87 29.98 20.06 27.28 27.04 24.98</code></pre>
+<p>Vamos organizar essa informações no formato tabular, embutindo em uma matriz. A matriz nada mais é do que vários vetores. Pensa no vetor como cada coluna de uma “tabela” e a matriz várias colunas (ou vetores no caso) lado a lado. Para colocar os vetores que criamos ali acima lado a lado usamos a função <strong>cbind</strong> (Bind vem de juntar e c vem de colunas - portanto, juntar colunas).</p>
+<pre class="r"><code>Matriz&lt;-cbind(pesos,alturas,imc)
+Matriz
+##      pesos alturas   imc
+## [1,]    56    1.60 21.87
+## [2,]    95    1.78 29.98
+## [3,]    65    1.80 20.06
+## [4,]    77    1.68 27.28
+## [5,]    80    1.72 27.04
+## [6,]    68    1.65 24.98</code></pre>
+<p>Agora você pode estar perguntando: “Daniel, não dá para a gente colocar uma coluna com o nome correspondente e o status do IMC?”… Dá sim, para isso, vamos usar um novo tipo de objeto chamado <strong>dataframe</strong>. O dataframe é uma estrutura <strong>MUUUUUITO</strong> importante e tem uma estrutura de tabela. A diferença dela é que - diferente da matriz - cada coluna pode ter um tipo de dado distinto (texto, coluna, char). Em outros capítulos vamos aprender a fazer várias operações de manipulação de um dataframe.</p>
+<pre class="r"><code>library(dplyr)
+nomes&lt;-c(&quot;Alice&quot;,&quot;Gilmar&quot;,&quot;Cecilia&quot;,&quot;Bianca&quot;,&quot;Valentina&quot;,&quot;Augusto&quot;) # criando o vetor de nomes
+df_imc &lt;- as.data.frame(Matriz) # transformando a matriz no formato dataframe
+df_imc &lt;- cbind(nomes,df_imc)
+df_imc &lt;- df_imc %&gt;% 
+            mutate(status = case_when(imc &lt; 16 ~ &quot;Subpeso Severo&quot;,
+                                      imc &gt;= 16 &amp; imc &lt; 20 ~ &quot;Subpeso&quot;,
+                                      imc &gt;= 20 &amp; imc &lt; 25 ~ &quot;Normal&quot;,
+                                      imc &gt;= 25 &amp; imc &lt; 30 ~ &quot;Sobrepeso&quot;,
+                                      imc &gt;= 30 &amp; imc &lt; 40 ~ &quot;Obeso&quot;,
+                                      imc &gt;= 40 ~ &quot;Obeso Mórbido&quot;))
+df_imc
+##       nomes pesos alturas   imc    status
+## 1     Alice    56    1.60 21.87    Normal
+## 2    Gilmar    95    1.78 29.98 Sobrepeso
+## 3   Cecilia    65    1.80 20.06    Normal
+## 4    Bianca    77    1.68 27.28 Sobrepeso
+## 5 Valentina    80    1.72 27.04 Sobrepeso
+## 6   Augusto    68    1.65 24.98    Normal</code></pre>
+<p>Para criar a coluna do status de imc, além de transformar a matriz, tive que transformá-la para um dataframe e aplicar duas funções chamadas mutate e case_when. <strong>Peço que por enquanto só rode o script. Teremos uma aula específica para a manipulação de dados que tratarei com calma dessas funções.</strong> Nos vemos lá! ;)</p>
+</div>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>index on My blog</title>
-    <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/index/</link>
-    <description>Recent content in index on My blog</description>
+    <title>index on Daniel Pagotto</title>
+    <link>https://danielppagotto.github.io/blog_Daniel/tags/index/</link>
+    <description>Recent content in index on Daniel Pagotto</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://danielppagotto.github.io/blog_Daniel_21_04/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://danielppagotto.github.io/blog_Daniel/tags/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Posts</title>
-      <link>https://danielppagotto.github.io/blog_Daniel_21_04/post/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel/post/</link>
       <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/post/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel/post/</guid>
       <description></description>
     </item>
     

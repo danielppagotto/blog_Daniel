@@ -61,6 +61,6 @@ title = "e-mail"
 url = "mailto:danielppagotto@gmail.com"
 
 [[socialIcons]]
-icon = "fas fa-search"
+icon = "fas fa-book-open"
 title = "Lattes"
 url = "http://lattes.cnpq.br/3337832273485503"

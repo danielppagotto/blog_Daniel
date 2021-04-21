@@ -55,3 +55,8 @@ url = "https://www.instagram.com/danielppagotto/"
 icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:danielppagotto@gmail.com"
+
+[[socialIcons]]
+icon = "fas fa-search"
+title = "Lattes"
+url = "http://lattes.cnpq.br/3337832273485503"

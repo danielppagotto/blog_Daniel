@@ -2,134 +2,134 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My blog</title>
-    <link>https://danielppagotto.github.io/tags/</link>
+    <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/</link>
     <description>Recent content in Tags on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Mar 2021 21:47:41 +0000</lastBuildDate><atom:link href="https://danielppagotto.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Mar 2021 21:47:41 +0000</lastBuildDate><atom:link href="https://danielppagotto.github.io/blog_Daniel_21_04/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>demo</title>
-      <link>https://danielppagotto.github.io/tags/demo/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/demo/</link>
       <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/demo/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shortcode</title>
-      <link>https://danielppagotto.github.io/tags/shortcode/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/shortcode/</link>
       <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/shortcode/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/shortcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>plot</title>
-      <link>https://danielppagotto.github.io/tags/plot/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/plot/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/plot/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>https://danielppagotto.github.io/tags/r-markdown/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/r-markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/r-markdown/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>https://danielppagotto.github.io/tags/regression/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/regression/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/regression/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>https://danielppagotto.github.io/tags/css/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/css/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://danielppagotto.github.io/tags/html/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/html/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/html/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://danielppagotto.github.io/tags/markdown/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/markdown/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>privacy</title>
-      <link>https://danielppagotto.github.io/tags/privacy/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/privacy/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/privacy/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shortcodes</title>
-      <link>https://danielppagotto.github.io/tags/shortcodes/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/shortcodes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/shortcodes/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/shortcodes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text</title>
-      <link>https://danielppagotto.github.io/tags/text/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/text/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/text/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emoji</title>
-      <link>https://danielppagotto.github.io/tags/emoji/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/emoji/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/emoji/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/emoji/</guid>
       <description></description>
     </item>
     
     <item>
       <title>thumbnail</title>
-      <link>https://danielppagotto.github.io/tags/thumbnail/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/thumbnail/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/thumbnail/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/thumbnail/</guid>
       <description></description>
     </item>
     
     <item>
       <title>index</title>
-      <link>https://danielppagotto.github.io/tags/index/</link>
+      <link>https://danielppagotto.github.io/blog_Daniel_21_04/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://danielppagotto.github.io/tags/index/</guid>
+      <guid>https://danielppagotto.github.io/blog_Daniel_21_04/tags/index/</guid>
       <description></description>
     </item>
     

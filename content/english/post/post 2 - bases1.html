@@ -1,0 +1,58 @@
+---
+author: Daniel Pagotto
+date: "2021-04-20"
+description: Bases de dados de empreendedorismo - parte 1
+tags: ["base de dados","PSED","GEM"]
+categories: ["R"]
+title: Bases de dados de empreendedorismo - parte 1
+---
+
+
+
+<p>Essa aula inaugura uma série de posts sobre bases de dados públicas nas áreas de empreendedorismo, inovação e saúde (meu último projeto tem envolvido a área de gestão do trabalho na saúde). <strong>Para iniciar vamos falar de bases de empreendedorismo.</strong></p>
+<p>Você já deve estar cansado de ouvir que dados são o novo petróleo e que nunca nós tivemos um volume de dados disponível como atualmente, né? Pode soar clichê (e muito provavelmente daqui 10 anos estaremos repetindo isso), mas hoje temos muita capacidade de armazenamento e processamento de dados. Olha que interessante esse <a href="https://link.springer.com/article/10.1007/s11187-019-00218-w">artigo</a> publicado na Small Business Economics que usou algortimos de deep learning para avaliar vídeos da plataforma Kickstarter para identificar quais tipos de <em>pitches</em> tinham melhores chances de receberem financiamento.</p>
+<div id="nesse-post-falaremos-sobre-duas-bases" class="section level3">
+<h3>Nesse post falaremos sobre duas bases!</h3>
+<ol style="list-style-type: decimal">
+<li>Panel Study of Entrepreneurial Dynamics (PSED)</li>
+<li>Global Entrepreneurship Monitor (GEM)</li>
+</ol>
+</div>
+<div id="psed" class="section level2">
+<h2>PSED</h2>
+<p>O <a href="http://www.psed.isr.umich.edu/psed/home">PSED</a> é uma base de dados em painel que coleciona dados sobre 1214 empreendedores americanos ao longo do período de 5 anos. Grandes pesquisadores estiverem presentes na implementação, bem como instituições renomadas como a Universidade de Michigan e a Kauffman Foundation.</p>
+<div id="tá-daniel-mas-qual-o-valor-do-psed-para-as-pesquisas-em-empreendedorismo" class="section level4">
+<h4>“Tá, Daniel, Mas qual o valor do PSED para as pesquisas em empreendedorismo?”</h4>
+<p>Muitas pesquisas indicam a necessidade de se realizar investigações sob corte longitudinal na área de empreendedorismo, uma vez que lidamos como um fenômeno que tem natureza de um processo. Pouquíssimas bases (se não for nenhuma) consegue acompanhar empreendedores por tanto tempo igual o PSED. <strong>Cada ano os pesquisadores realizavam entrevistas por telefone com os empreendedores selecionados na triagem inicial para capturar dados sobre o desenvolvimento dos negócios</strong>.</p>
+</div>
+<div id="para-se-ter-uma-ideia-do-tanto-de-dado-o-psed-é-uma-base-que-contém-mais-de-7000-colunas" class="section level4">
+<h4>para se ter uma ideia do tanto de dado, o PSED é uma base que contém mais de 7000 colunas</h4>
+<p>Sugiro fortemente que dê uma lida no codebook e nos questionários acessando esse <a href="http://www.psed.isr.umich.edu/psed/data">link</a>. Vou falar de algumas variáveis que acho interessante:</p>
+<ol style="list-style-type: decimal">
+<li>Tipo de negócio</li>
+<li>Natureza jurídica do negócio</li>
+<li>Algumas atividades já executadas pela empresa (ex.: elaboração de plano de negócios, registro da empresa, atividades de marketing)</li>
+<li>Finanças da empresa</li>
+<li>Atitudes do empreendedor em relação à competição</li>
+<li>Perfil dos sócios</li>
+<li>Perfil de pessoas que prestaram algum suporte à empresa
+…</li>
+</ol>
+<p>Enfim, é muuita coisa! Existe um universo de perguntas que podemos responder a partir desses dados. Ah… detalhe… muitas dessas perguntas são realizadas a cada, portanto, podemos ver a dinâmica do processo empreendedor.</p>
+</div>
+</div>
+<div id="gem" class="section level2">
+<h2>GEM</h2>
+<p>O <a href="https://www.gemconsortium.org/">GEM</a> é um iniciativa que vem colecionando dados de empreendedorismo a nível país há 22 anos. As bases do GEM se dividem em dois grupos: 1) Comportamento e atitudes empreendedoras - pesquisadores levantam dados da população que está iniciando um negócio; 2) Condições ambientais para empreendedorismo - pesquisadores levantam dados sobre o ecossistema empreendedor com especialistas.</p>
+<p>A primeira base permite verificar questões como:
+1) Aversão ao risco de se iniciar um negócio
+2) Percepções sobre oportunidades de se criar um negócio
+3) Percepções sobre a capacidade de iniciar um negócio
+4) Percentual de pessoas iniciando um negócio motivado por oportunidade em relação a necessidade</p>
+<p>Dentre outros dados, a segunda base permite verificar dados como:
+1) Políticas governamentais para suporte dos empreendedores
+2) Nível de impostos e burocracia que incide sobre empreendedores
+3) Infraestrutura comercial e profissional
+4) Educação empreendedora a nível escolar e universitário
+…</p>
+</div>

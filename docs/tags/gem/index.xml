@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GEM on Daniel Pagotto</title>
+    <link>https://danielppagotto.github.io/blog_Daniel/tags/gem/</link>
+    <description>Recent content in GEM on Daniel Pagotto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danielppagotto.github.io/blog_Daniel/tags/gem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bases de dados de empreendedorismo - parte 1</title>
+      <link>https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/</guid>
+      <description>Essa aula inaugura uma série de posts sobre bases de dados nas áreas de empreendedorismo, inovação e saúde (meu último projeto tem envolvido a área de gestão do trabalho na saúde).</description>
+    </item>
+    
+  </channel>
+</rss>

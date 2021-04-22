@@ -9,7 +9,9 @@ title: Bases de dados de empreendedorismo - parte 1
 
 Essa aula inaugura uma série de posts sobre bases de dados públicas nas áreas de empreendedorismo, inovação e saúde (meu último projeto tem envolvido a área de gestão do trabalho na saúde). **Para iniciar vamos falar de bases de empreendedorismo.**
 
-Você já deve estar cansado de ouvir que dados são o novo petróleo e que nunca nós tivemos um volume de dados disponível como atualmente, né? Pode soar clichê (e muito provavelmente daqui 10 anos estaremos repetindo isso), mas hoje temos muita capacidade de armazenamento e processamento de dados. Olha que interessante esse [artigo](https://link.springer.com/article/10.1007/s11187-019-00218-w) publicado na Small Business Economics que usou algortimos de deep learning para avaliar vídeos da plataforma Kickstarter para identificar quais tipos de *pitches* tinham melhores chances de receberem financiamento. 
+Você já deve estar cansado de ouvir que dados são o novo petróleo e que nunca nós tivemos um volume de dados disponível como atualmente, né? Pode soar clichê (e muito provavelmente daqui 10 anos estaremos repetindo isso), mas hoje temos muita capacidade de armazenamento e processamento de dados. 
+
+Olha que interessante esse [artigo](https://link.springer.com/article/10.1007/s11187-019-00218-w) publicado na Small Business Economics que usou algortimos de deep learning para avaliar vídeos da plataforma Kickstarter para identificar quais tipos de *pitches* tinham melhores chances de receberem financiamento. 
 
 ### Nesse post falaremos sobre duas bases!
 

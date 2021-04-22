@@ -24,7 +24,7 @@ O [PSED](http://www.psed.isr.umich.edu/psed/home) é uma base de dados em painel
 
 Muitas pesquisas indicam a necessidade de se realizar investigações sob corte longitudinal na área de empreendedorismo, uma vez que lidamos como um fenômeno que tem natureza de um processo. Pouquíssimas bases (se não for nenhuma) consegue acompanhar empreendedores por tanto tempo igual o PSED. **Cada ano os pesquisadores realizavam entrevistas por telefone com os empreendedores selecionados na triagem inicial para capturar dados sobre o desenvolvimento dos negócios**. 
 
-#### para se ter uma ideia do tanto de dado, o PSED é uma base que contém mais de 7000 colunas 
+#### Para se ter uma ideia do tanto de dado, o PSED é uma base que contém mais de 7000 colunas 
 
 Sugiro fortemente que dê uma lida no codebook e nos questionários acessando esse [link](http://www.psed.isr.umich.edu/psed/data). Vou falar de algumas variáveis que acho interessante: 
 

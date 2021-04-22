@@ -15,20 +15,24 @@ Olha que interessante esse [artigo](https://link.springer.com/article/10.1007/s1
 
 ### Nesse post falaremos sobre duas bases!
 
-1. Panel Study of Entrepreneurial Dynamics (PSED)
+1. Panel Study of Entrepreneurial Dynamics 2 (PSED 2)
 2. Global Entrepreneurship Monitor (GEM)
 
-## PSED
+## PSED 2
 
-O [PSED](http://www.psed.isr.umich.edu/psed/home) é uma base de dados em painel que coleciona dados sobre 1214 empreendedores americanos ao longo do período de 5 anos. Grandes pesquisadores estiverem presentes na implementação, bem como instituições renomadas como a Universidade de Michigan e a Kauffman Foundation. 
+O [PSED 2](http://www.psed.isr.umich.edu/psed/home) é uma base de dados em painel que coleciona dados sobre 1214 empreendedores americanos ao longo do período de 5 anos. Grandes pesquisadores estiverem presentes na implementação, bem como instituições renomadas como a Universidade de Michigan e a Kauffman Foundation. 
+
+Apenas uma breve observação, existem outros PSED (ex.: a primeira edição, a sueca), mas aqui falaremos apenas do PSED 2. 
 
 #### "Tá, Daniel, Mas qual o valor do PSED para as pesquisas em empreendedorismo?"
 
-Muitas pesquisas indicam a necessidade de se realizar investigações sob corte longitudinal na área de empreendedorismo, uma vez que lidamos como um fenômeno que tem natureza de um processo. Pouquíssimas bases (se não for nenhuma) consegue acompanhar empreendedores por tanto tempo igual o PSED. **Cada ano os pesquisadores realizavam entrevistas por telefone com os empreendedores selecionados na triagem inicial para capturar dados sobre o desenvolvimento dos negócios**. 
+Muitas pesquisas indicam a necessidade de se realizar investigações sob corte longitudinal na área de empreendedorismo, uma vez que lidamos como um fenômeno que tem natureza de um processo. Pouquíssimas bases (se não for nenhuma) consegue acompanhar empreendedores por tanto tempo igual o PSED 2. **Cada ano os pesquisadores realizavam entrevistas por telefone com os empreendedores selecionados na triagem inicial para capturar dados sobre o desenvolvimento dos negócios**. 
 
-#### Para se ter uma ideia do tanto de dado, o PSED é uma base que contém mais de 7000 colunas 
+#### Para se ter uma ideia do tanto de dado, o PSED 2 é uma base que contém mais de 7000 colunas 
 
-Sugiro fortemente que dê uma lida no codebook e nos questionários acessando esse [link](http://www.psed.isr.umich.edu/psed/data). Vou falar de algumas variáveis que acho interessante: 
+Sugiro fortemente que dê uma lida no codebook e nos questionários acessando esse [link](http://www.psed.isr.umich.edu/psed/data) para ver a grandiosidade do PSED. 
+
+Vou falar de algumas variáveis que acho interessante: 
 
 1) Tipo de negócio
 2) Natureza jurídica do negócio 

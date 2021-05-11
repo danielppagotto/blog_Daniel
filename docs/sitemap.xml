@@ -3,30 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://danielppagotto.github.io/blog_Daniel/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/categories/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/tags/dplyr/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/post/post-3-explorando-psed/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/tags/foreign/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/post/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/tags/psed/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/categories/r/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://danielppagotto.github.io/blog_Daniel/tags/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/tags/b%C3%A1sico/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danielppagotto.github.io/blog_Daniel/categories/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/post/post-1-b%C3%A1sico/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://danielppagotto.github.io/blog_Daniel/post/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/tags/primeiros-passos/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/tags/r/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://danielppagotto.github.io/blog_Daniel/categories/r/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://danielppagotto.github.io/blog_Daniel/tags/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/tags/base-de-dados/</loc>
@@ -36,9 +48,6 @@
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/tags/gem/</loc>
-    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://danielppagotto.github.io/blog_Daniel/tags/psed/</loc>
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://danielppagotto.github.io/blog_Daniel/archives/</loc>

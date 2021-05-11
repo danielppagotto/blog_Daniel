@@ -1,0 +1,77 @@
+---
+author: Daniel Pagotto
+date: "2021-04-27"
+description: Manipulando o PSED
+tags: ["PSED","dplyr","foreign"]
+categories: ["R"]
+title: Explorando o PSED 2
+---
+
+Há alguns posts atrás aprendemos sobre o Panel Study of Entrepreneurial Dynamics (PSED 2). Dá uma conferida no [post](https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/).  
+
+O **objetivo** desse post é **apresentar conceitos de um pacote muuuuito importante do R que é o dplyr por meio da exploração do PSED 2**. O dplyr faz parte de uma coleção de pacotes chamado [tidyverse](https://www.tidyverse.org/), muito útil na manipulação e visualização de dados. 
+
+
+Para iniciar, o primeiro passo é subir o PSED2 para o *Global Environment* do R. Aqui entra o primeiro ensinamento! A base o PSED está em formato .sav, que é um formato de arquivo próprio do SPSS. Para abrir a base, portanto, é necessário incluir um pacote que permite abrir esse tipo de arquivo, que nessa ocasião será o *foreign*.  
+
+```{r message=FALSE, warning=FALSE}
+library(foreign)
+
+psed <- read.spss("psedii_scrn_ABCDEF.sav", use.value.labels = TRUE)
+
+psed <- as.data.frame(psed)
+
+
+```
+
+Nesse ponto, duas coisas são bem importantes! O PSED é uma base que possui labels (etiquetas) para cada variável e isso é muito bom! 
+
+#### O que é label, Daniel? 
+
+Pensa em uma variável chamada sexo, onde, na base, 1 significa masculino e 0 significa feminino. Quando você usa o argumento use.value.labels = TRUE, o R já "traduz" os códigos 0 ou 1 em masculino e feminino. Depois testa o mesmo comando, mas troca o argumento de TRUE para FALSE para ver como fica. 
+
+Além disso, é importante notar que assim que lido, o PSED entra no global environment no formato de **lista**, por isso, em sequência, eu transformei no formato data frame. 
+
+## Explorando a base! 
+
+Agora que você tem a base, vamos explorar. Veja só... o PSED possui 7817 colunas! É muuuuuita coisa! É inviável trabalhar com esse tanto de coluna. **Por isso, vamos selecionar apenas aquelas variáveis que interessa ao nosso estudo**. Para isso, utilizaremos o função select do pacote dplyr. 
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+
+psed_selecionadas <- psed %>%
+                      select(AA2a, AA5a, AA6a, AA7, AA9, AB1, AB8, AC1, AD1, AD2, AD9,AD11,AD13,AD16,AD18,AD20,AD22,AD24,AD26,AD28,
+                             AE9, AE10, AE11, AE13,AE15,AE26,AE28,AG2,AH2_1,AH2_2,AH2_3,AH2_4,AH2_5,AH6_1,AH6_2,AH6_3,AH6_4,AH6_5,
+                             AH11_1,AH11_2,AH11_3,AH11_4,AH11_5,AH12_1,AH12_2,AH12_3,AH12_4,AH12_5,AP1,AP2,AP3,AP4,AP5,AP6,AP7,AP8,
+                             AP9,AP10,AP11,AP12,AQ4_1,AQ4_2,AQ4_3,AQ4_4,AQ4_5,AQ5_1,AQ5_2,AQ5_3,AQ5_4,AQ5_5,AQ6_1,AQ6_2,AQ6_3,AQ6_4,
+                             AQ6_5,AQ7_1,AQ7_2,AQ7_3,AQ7_4,AQ7_5,AQ8_1,AQ8_2,AQ8_3,AQ8_4,AQ8_5,AQ9_1,AQ9_2,AQ9_3,AQ9_4,AQ9_5,AQ10_1,
+                             AQ10_2,AQ10_3,AQ10_4,AQ10_5,AR4,AR5,AS7,AS8,AS9,AS10,AS11,AS12,AS13)
+
+
+```
+
+Duas observações! 
+
+- Eu selecionei algumas variáveis para nosso estudo. É importantíssimo que você entre no [dicionário de dados](http://www.psed.isr.umich.edu/psed/download_node/157) para saber o que significa cada variável. 
+
+- Esse comando %>% é muito importante! É como se você estivesse falando para o R assim: "R vai lá no objeto chamado PSED e, em sequência, faça um procedimento de selecionar as variáveis listadas aqui..."
+
+Veja que agora você tem dois objetos lá no seu **global environment**, um é o PSED bruto, com todas as variáveis, e o outro é o psed com as variáveis que foram selecionadas.  
+
+Vamos fazer algumas explorações na base agora. Os comandos abaixo servem para fazer alguns resumos breves dos dados que foram selecionados. 
+
+```{r}
+
+summary(psed_selecionadas)
+
+
+
+
+```
+
+
+
+
+
+
+

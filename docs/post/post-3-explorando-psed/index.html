@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> Daniel Pagotto | Explorando o PSED 2 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Manipulando o PSED">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/blog_Daniel/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    
+    <link rel="stylesheet"
+        href="/blog_Daniel/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/blog_Daniel/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog_Daniel/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog_Daniel/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog_Daniel/favicon-16x16.png">
+
+    <link rel="canonical" href="/blog_Daniel/post/post-3-explorando-psed/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/blog_Daniel/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/blog_Daniel/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://danielppagotto.github.io/blog_Daniel/images/foto-daniel.jpg"/>
+
+<meta name="twitter:title" content="Explorando o PSED 2"/>
+<meta name="twitter:description" content="Manipulando o PSED"/>
+
+
+    
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/blog_Daniel/images/foto-daniel.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Daniel Pagotto</a></h3>
+            <div class="description">
+                <p>               Análise de dados, empreendedorismo, inovação e gestão<br>               Pesquisador, professor e gestor de projetos<br>               </p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.linkedin.com/in/daniel-do-prado-pagotto-bab62a50/" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/danielppagotto/" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.instagram.com/danielppagotto/" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:danielppagotto@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://lattes.cnpq.br/3337832273485503" rel="me" aria-label="Lattes">
+                    <i class="fas fa-book-open fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Daniel Pagotto  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/blog_Daniel/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/blog_Daniel/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/blog_Daniel/about/"
+                        
+                   title="">Sobre</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Explorando o PSED 2</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                27/4/2021
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">13-minute read</span>
+                    </div>
+                
+            </div>
+
+            
+
+
+<p>Há alguns posts atrás aprendemos sobre o Panel Study of Entrepreneurial Dynamics (PSED 2). Dá uma conferida no <a href="https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/">post</a>.</p>
+<p>O <strong>objetivo</strong> desse post é <strong>apresentar conceitos de um pacote muuuuito importante do R que é o dplyr por meio da exploração do PSED 2</strong>. O dplyr faz parte de uma coleção de pacotes chamado <a href="https://www.tidyverse.org/">tidyverse</a>, muito útil na manipulação e visualização de dados.</p>
+<p>Para iniciar, o primeiro passo é subir o PSED2 para o <em>Global Environment</em> do R. Aqui entra o primeiro ensinamento! A base o PSED está em formato .sav, que é um formato de arquivo próprio do SPSS. Para abrir a base, portanto, é necessário incluir um pacote que permite abrir esse tipo de arquivo, que nessa ocasião será o <em>foreign</em>.</p>
+<pre class="r"><code>library(foreign)
+
+psed &lt;- read.spss(&quot;psedii_scrn_ABCDEF.sav&quot;, use.value.labels = TRUE)
+
+psed &lt;- as.data.frame(psed)</code></pre>
+<p>Nesse ponto, duas coisas são bem importantes! O PSED é uma base que possui labels (etiquetas) para cada variável e isso é muito bom!</p>
+<div id="o-que-é-label-daniel" class="section level4">
+<h4>O que é label, Daniel?</h4>
+<p>Pensa em uma variável chamada sexo, onde, na base, 1 significa masculino e 0 significa feminino. Quando você usa o argumento use.value.labels = TRUE, o R já “traduz” os códigos 0 ou 1 em masculino e feminino. Depois testa o mesmo comando, mas troca o argumento de TRUE para FALSE para ver como fica.</p>
+<p>Além disso, é importante notar que assim que lido, o PSED entra no global environment no formato de <strong>lista</strong>, por isso, em sequência, eu transformei no formato data frame.</p>
+</div>
+<div id="explorando-a-base" class="section level2">
+<h2>Explorando a base!</h2>
+<p>Agora que você tem a base, vamos explorar. Veja só… o PSED possui 7817 colunas! É muuuuuita coisa! É inviável trabalhar com esse tanto de coluna. <strong>Por isso, vamos selecionar apenas aquelas variáveis que interessa ao nosso estudo</strong>. Para isso, utilizaremos o função select do pacote dplyr.</p>
+<pre class="r"><code>library(tidyverse)
+
+psed_selecionadas &lt;- psed %&gt;%
+                      select(AA2a, AA5a, AA6a, AA7, AA9, AB1, AB8, AC1, AD1, AD2, AD9,AD11,AD13,AD16,AD18,AD20,AD22,AD24,AD26,AD28,
+                             AE9, AE10, AE11, AE13,AE15,AE26,AE28,AG2,AH2_1,AH2_2,AH2_3,AH2_4,AH2_5,AH6_1,AH6_2,AH6_3,AH6_4,AH6_5,
+                             AH11_1,AH11_2,AH11_3,AH11_4,AH11_5,AH12_1,AH12_2,AH12_3,AH12_4,AH12_5,AP1,AP2,AP3,AP4,AP5,AP6,AP7,AP8,
+                             AP9,AP10,AP11,AP12,AQ4_1,AQ4_2,AQ4_3,AQ4_4,AQ4_5,AQ5_1,AQ5_2,AQ5_3,AQ5_4,AQ5_5,AQ6_1,AQ6_2,AQ6_3,AQ6_4,
+                             AQ6_5,AQ7_1,AQ7_2,AQ7_3,AQ7_4,AQ7_5,AQ8_1,AQ8_2,AQ8_3,AQ8_4,AQ8_5,AQ9_1,AQ9_2,AQ9_3,AQ9_4,AQ9_5,AQ10_1,
+                             AQ10_2,AQ10_3,AQ10_4,AQ10_5,AR4,AR5,AS7,AS8,AS9,AS10,AS11,AS12,AS13)</code></pre>
+<p>Duas observações!</p>
+<ul>
+<li><p>Eu selecionei algumas variáveis para nosso estudo. É importantíssimo que você entre no <a href="http://www.psed.isr.umich.edu/psed/download_node/157">dicionário de dados</a> para saber o que significa cada variável.</p></li>
+<li><p>Esse comando %&gt;% é muito importante! É como se você estivesse falando para o R assim: “R vai lá no objeto chamado PSED e, em sequência, faça um procedimento de selecionar as variáveis listadas aqui…”</p></li>
+</ul>
+<p>Veja que agora você tem dois objetos lá no seu <strong>global environment</strong>, um é o PSED bruto, com todas as variáveis, e o outro é o psed com as variáveis que foram selecionadas.</p>
+<p>Vamos fazer algumas explorações na base agora. Os comandos abaixo servem para fazer alguns resumos breves dos dados que foram selecionados.</p>
+<pre class="r"><code>summary(psed_selecionadas)</code></pre>
+<pre><code>##                                        AA2a    
+##  Work experience; knowledge of field     :129  
+##  Enjoy work, have passion for it; hobby  :122  
+##  Income; to make money                   :117  
+##  Be own boss; tired of working for others: 80  
+##  High demand for products/business       : 75  
+##  Extra income -- NFS                     : 50  
+##  (Other)                                 :641  
+##                                        AA5a    
+##  High demand for products/business       :142  
+##  Work experience; knowledge of field     :118  
+##  Market opportunity; untapped market     : 99  
+##  Encouraged                              : 69  
+##  Income; to make money                   : 63  
+##  Be own boss; tired of working for others: 53  
+##  (Other)                                 :670  
+##                                        AA6a                 AA7     
+##  Acquiring other capital/money; financing:340   Idea First    :451  
+##  Customer marketing/ sales               :113   Decision First:162  
+##  Other business decision references      : 62   Both          :593  
+##  Advertising; marketing -- NFS           : 61   DK            :  7  
+##  Start-up costs -- NFS                   : 56   NA            :  1  
+##  Scheduling/time management              : 56                       
+##  (Other)                                 :526                       
+##                  AA9                                AB1     
+##  Hobby             :314   Consumer Service            :423  
+##  Idea From Start Up:314   Retail Store                :157  
+##  Previous Work     :287   Business Consulting services: 95  
+##  Current Work      :192   Health Service              : 85  
+##  Research          : 52   Construction                : 82  
+##  Separate Business : 29   Manufacturing               : 67  
+##  (Other)           : 26   (Other)                     :305  
+##                                       AB8     
+##  Residence or personal property         :576  
+##  Specific location not yet needed       :430  
+##  Special location for start-up          :106  
+##  Site of existing business              : 86  
+##  DK                                     :  6  
+##  Residence/personal and special location:  5  
+##  (Other)                                :  5  
+##                                    AC1                           AD1     
+##  Sole Proprietorship                 :463   Yes                    :599  
+##  Not Yet Determined                  :416   Not Yet, Will in Future:359  
+##  Limited Liability Corporation or LLC:125   No, Not Relevant       :244  
+##  General Partnership                 : 74   DK                     : 12  
+##  Sub Chapter S Corporation           : 59   NA                     :  0  
+##  Limited Partnership                 : 30                                
+##  (Other)                             : 47                                
+##                  AD2                           AD9     
+##  Unwritten         :121   Yes                    :450  
+##  Informally written:291   Not Yet, Will in Future:448  
+##  Formally prepared :181   No, Not Relevant       :313  
+##  DK                :  5   DK                     :  3  
+##  NA                :  1   NA                     :  0  
+##  NA&#39;s              :615                                
+##                                                        
+##                       AD11                          AD13    
+##  Yes                    : 83   Yes                    : 64  
+##  Not Yet, Will in Future:164   Not Yet, Will in Future:271  
+##  No, Not Relevant       :950   No, Not Relevant       :868  
+##  DK                     : 15   DK                     : 10  
+##  NA                     :  2   NA                     :  1  
+##                                                             
+##                                                             
+##                       AD16                          AD18    
+##  Yes                    :520   Yes                    :544  
+##  Not Yet, Will in Future:428   Not Yet, Will in Future:390  
+##  No, Not Relevant       :262   No, Not Relevant       :278  
+##  DK                     :  2   DK                     :  1  
+##  NA                     :  2   NA                     :  1  
+##                                                             
+##                                                             
+##                       AD20                          AD22    
+##  Yes                    :815   Yes                    :635  
+##  Not Yet, Will in Future:277   Not Yet, Will in Future:193  
+##  No, Not Relevant       :118   No, Not Relevant       :377  
+##  DK                     :  3   DK                     :  7  
+##  NA                     :  1   NA                     :  2  
+##                                                             
+##                                                             
+##                       AD24                          AD26    
+##  Yes                    :531   Yes                    :348  
+##  Not Yet, Will in Future:334   Not Yet, Will in Future:603  
+##  No, Not Relevant       :341   No, Not Relevant       :260  
+##  DK                     :  8   DK                     :  3  
+##  NA                     :  0   NA                     :  0  
+##                                                             
+##                                                             
+##                       AD28          AE9            AE10     
+##  Yes                    :530   0      :  30   0      :  43  
+##  Not Yet, Will in Future:366   1      :  22   1      :  25  
+##  No, Not Relevant       :310   2      :  22   2      :  10  
+##  DK                     :  8   3      :   6   3      :   9  
+##  NA                     :  0   4      :   6   5      :   3  
+##                                (Other):  12   (Other):   8  
+##                                NA&#39;s   :1116   NA&#39;s   :1116  
+##                             AE11      AE13       AE15    
+##  Yes                          :371   Yes:602   Yes :291  
+##  No, not yet; will in future  :656   No :609   No  :301  
+##  No, not relevant             :169   DK :  2   DK  :  9  
+##  Using exist account (if vol.): 11   NA :  1   NA  :  1  
+##  DK                           :  7             NA&#39;s:612  
+##  NA                           :  0                       
+##                                                          
+##                       AE26                          AE28          AG2        
+##  Yes                    :249   Yes                    :159   Min.   : 1.000  
+##  Not Yet, Will in Future:529   Not Yet, Will in Future:454   1st Qu.: 1.000  
+##  No, Not Relevant       :411   No, Not Relevant       :559   Median : 1.000  
+##  DK                     : 25   DK                     : 41   Mean   : 1.866  
+##  NA                     :  0   NA                     :  1   3rd Qu.: 2.000  
+##                                                              Max.   :95.000  
+##                                                                              
+##      AH2_1         AH2_2         AH2_3          AH2_4          AH2_5     
+##  40     : 43   40     : 24   32     :   8   30     :   5   28     :   2  
+##  51     : 42   55     : 21   42     :   7   34     :   4   37     :   1  
+##  50     : 41   44     : 19   58     :   6   26     :   3   40     :   1  
+##  38     : 38   45     : 19   30     :   5   28     :   3   45     :   1  
+##  45     : 38   48     : 17   50     :   5   40     :   3   48     :   1  
+##  47     : 37   (Other):455   (Other): 107   (Other):  51   (Other):   4  
+##  (Other):975   NA&#39;s   :659   NA&#39;s   :1076   NA&#39;s   :1145   NA&#39;s   :1204  
+##                             AH6_1                                AH6_2    
+##  Some college                  :342   Bachelors degree              :153  
+##  Bachelors degree              :255   High school degree            :145  
+##  High school degree            :238   Some college                  :107  
+##  Masters degree                :112   Masters degree                : 49  
+##  Technical or vocational degree: 66   Technical or vocational degree: 21  
+##  Community college degree      : 63   (Other)                       : 80  
+##  (Other)                       :138   NA&#39;s                          :659  
+##                        AH6_3                           AH6_4     
+##  High school degree       :  39   High school degree      :  20  
+##  Bachelors degree         :  38   Bachelors degree        :  18  
+##  Some college             :  15   Some college            :   9  
+##  Masters degree           :  14   Masters degree          :   7  
+##  Law, MD, PHD, EDD, Degree:   9   Community college degree:   4  
+##  (Other)                  :  23   (Other)                 :  11  
+##  NA&#39;s                     :1076   NA&#39;s                    :1145  
+##                        AH6_5          AH11_1        AH11_2        AH11_3    
+##  Bachelors degree         :   6   0      :264   0      :198   0      :  57  
+##  High school degree       :   2   1      :112   1      : 50   1      :  11  
+##  Some graduate training   :   1   10     : 82   2      : 42   2      :   8  
+##  Law, MD, PHD, EDD, Degree:   1   2      : 78   10     : 37   10     :   7  
+##  Up to eighth grade       :   0   15     : 67   20     : 29   20     :   6  
+##  (Other)                  :   0   5      : 67   (Other):199   (Other):  49  
+##  NA&#39;s                     :1204   (Other):544   NA&#39;s   :659   NA&#39;s   :1076  
+##      AH11_4                       AH11_5         AH12_1        AH12_2   
+##  0      :  26   0                    :   5   0      :663   0      :270  
+##  5      :   7   10                   :   3   1      :256   1      :149  
+##  10     :   5   5                    :   1   2      :152   2      : 66  
+##  15     :   5   7                    :   1   3      : 78   3      : 29  
+##  2      :   5   95 or more businesses:   0   4      : 23   DK     : 14  
+##  (Other):  21   (Other)              :   0   5      : 16   (Other): 27  
+##  NA&#39;s   :1145   NA&#39;s                 :1204   (Other): 26   NA&#39;s   :659  
+##      AH12_3         AH12_4                       AH12_5    
+##  0      :  72   0      :  34   0                    :   6  
+##  1      :  26   1      :  12   1                    :   2  
+##  2      :  17   2      :   6   2                    :   2  
+##  DK     :  11   DK     :   6   95 or more businesses:   0  
+##  3      :   6   3      :   5   DK                   :   0  
+##  (Other):   6   (Other):   6   NA                   :   0  
+##  NA&#39;s   :1076   NA&#39;s   :1145   NA&#39;s                 :1204  
+##                 AP1                     AP2                     AP3     
+##  Strongly Agree   :309   Strongly Agree   :286   Strongly Agree   :231  
+##  Agree            :553   Agree            :597   Agree            :559  
+##  Neither          :214   Neither          :197   Neither          :189  
+##  Disagree         : 89   Disagree         :101   Disagree         :176  
+##  Strongly Disagree: 46   Strongly Disagree: 30   Strongly Disagree: 50  
+##  DK               :  2   DK               :  3   DK               :  9  
+##  NA               :  1   NA               :  0   NA               :  0  
+##                 AP4                     AP5                     AP6     
+##  Strongly Agree   :250   Strongly Agree   :306   Strongly Agree   :138  
+##  Agree            :599   Agree            :677   Agree            :427  
+##  Neither          :161   Neither          :128   Neither          :261  
+##  Disagree         :156   Disagree         : 74   Disagree         :276  
+##  Strongly Disagree: 44   Strongly Disagree: 25   Strongly Disagree: 92  
+##  DK               :  4   DK               :  4   DK               : 20  
+##  NA               :  0   NA               :  0   NA               :  0  
+##                 AP7                     AP8                     AP9     
+##  Strongly Agree   : 95   Strongly Agree   : 61   Strongly Agree   : 98  
+##  Agree            :457   Agree            :349   Agree            :533  
+##  Neither          :246   Neither          :314   Neither          :301  
+##  Disagree         :306   Disagree         :352   Disagree         :217  
+##  Strongly Disagree: 85   Strongly Disagree:105   Strongly Disagree: 41  
+##  DK               : 24   DK               : 33   DK               : 23  
+##  NA               :  1   NA               :  0   NA               :  1  
+##                 AP10                    AP11                    AP12    
+##  Strongly Agree   : 77   Strongly Agree   : 94   Strongly Agree   :156  
+##  Agree            :426   Agree            :365   Agree            :534  
+##  Neither          :152   Neither          :124   Neither          :184  
+##  Disagree         :473   Disagree         :529   Disagree         :283  
+##  Strongly Disagree: 77   Strongly Disagree: 97   Strongly Disagree: 33  
+##  DK               :  9   DK               :  5   DK               : 24  
+##  NA               :  0   NA               :  0   NA               :  0  
+##      AQ4_1         AQ4_2         AQ4_3          AQ4_4          AQ4_5     
+##  0      :275   0      :305   0      :  87   0      :  49   0      :  24  
+##  5000   : 78   1000   : 22   DK     :  12   1000   :   5   2000   :   3  
+##  1000   : 77   DK     : 22   2000   :   6   DK     :   4   500    :   3  
+##  10000  : 72   5000   : 20   1000   :   5   2000   :   3   DK     :   2  
+##  2000   : 62   2000   : 19   10000  :   5   3000   :   3   1000   :   1  
+##  3000   : 57   (Other):198   (Other):  42   (Other):  16   (Other):   3  
+##  (Other):593   NA&#39;s   :628   NA&#39;s   :1057   NA&#39;s   :1134   NA&#39;s   :1178  
+##      AQ5_1          AQ5_2         AQ5_3        AQ5_4       AQ5_5     
+##  0      :1024   0      :528   0      : 134   0    :  71   0   :  32  
+##  NA     :  23   DK     : 23   DK     :  11   1000 :   1   100 :   1  
+##  5000   :  17   NA     : 12   NA     :   2   40   :   1   250 :   1  
+##  500    :  16   1000   :  2   10     :   1   45000:   1   DK  :   2  
+##  1000   :  14   10000  :  2   1000   :   1   DK   :   5   NA  :   0  
+##  2000   :  11   (Other): 19   (Other):   8   NA   :   1   NA&#39;s:1178  
+##  (Other): 109   NA&#39;s   :628   NA&#39;s   :1057   NA&#39;s :1134              
+##      AQ6_1          AQ6_2         AQ6_3       AQ6_4       AQ6_5     
+##  0      :1132   0      :543   0      : 141   0   :  73   0   :  34  
+##  NA     :  20   DK     : 21   DK     :   9   500 :   1   DK  :   2  
+##  5000   :   7   NA     : 10   NA     :   2   DK  :   5   NA  :   0  
+##  500    :   6   5000   :  2   1000   :   1   NA  :   1   NA&#39;s:1178  
+##  DK     :   6   100    :  1   200    :   1   NA&#39;s:1134              
+##  1000   :   4   (Other):  9   (Other):   3                          
+##  (Other):  39   NA&#39;s   :628   NA&#39;s   :1057                          
+##      AQ7_1          AQ7_2         AQ7_3        AQ7_4       AQ7_5     
+##  0      :1074   0      :532   0      : 140   0    :  71   0   :  34  
+##  2000   :  18   DK     : 25   DK     :  10   1500 :   1   DK  :   2  
+##  NA     :  15   NA     :  9   2000   :   2   50000:   1   NA  :   0  
+##  1000   :  14   5000   :  4   NA     :   2   DK   :   6   NA&#39;s:1178  
+##  10000  :  14   2000   :  2   4000   :   1   NA   :   1              
+##  5000   :   8   (Other): 14   (Other):   2   NA&#39;s :1134              
+##  (Other):  71   NA&#39;s   :628   NA&#39;s   :1057                           
+##      AQ8_1          AQ8_2         AQ8_3       AQ8_4       AQ8_5     
+##  0      :1095   0      :519   0      : 138   0   :  72   0   :  33  
+##  NA     :  17   DK     : 23   DK     :  11   5000:   1   300 :   1  
+##  15000  :   7   NA     : 10   NA     :   2   DK  :   6   DK  :   2  
+##  5000   :   7   5000   :  5   1000   :   1   NA  :   1   NA  :   0  
+##  DK     :   6   2000   :  2   10000  :   1   NA&#39;s:1134   NA&#39;s:1178  
+##  1000   :   5   (Other): 27   (Other):   4                          
+##  (Other):  77   NA&#39;s   :628   NA&#39;s   :1057                          
+##      AQ9_1          AQ9_2         AQ9_3         AQ9_4       AQ9_5     
+##  0      :1149   0      :541   0      : 139   0     :  73   0   :  33  
+##  NA     :  11   DK     : 20   DK     :  10   450000:   1   DK  :   3  
+##  DK     :   7   NA     : 10   NA     :   2   DK    :   5   NA  :   0  
+##  10000  :   6   10000  :  3   1000   :   1   NA    :   1   NA&#39;s:1178  
+##  20000  :   4   25000  :  2   1200   :   1   NA&#39;s  :1134              
+##  25000  :   4   (Other): 10   (Other):   4                            
+##  (Other):  33   NA&#39;s   :628   NA&#39;s   :1057                            
+##    AQ10_1         AQ10_2       AQ10_3      AQ10_4      AQ10_5    
+##  0    :1179   0      :551   0     : 142   0   :  74   0   :  34  
+##  125  :   1   DK     : 18   250000:   1   DK  :   5   DK  :   2  
+##  500  :   1   NA     : 12   600   :   1   NA  :   1   NA  :   0  
+##  5000 :   1   2000   :  1   70000 :   1   NA&#39;s:1134   NA&#39;s:1178  
+##  50000:   1   20000  :  1   DK    :  10                          
+##  DK   :  10   (Other):  3   NA    :   2                          
+##  NA   :  21   NA&#39;s   :628   NA&#39;s  :1057                          
+##       AR4            AR5            AS7           AS8           AS9     
+##  2000   :   5   100    :  12   100    :256   0      :306   0      :572  
+##  5000   :   4   DK     :   6   50     :153   20     :141   10     : 85  
+##  NA     :   4   50     :   5   75     : 98   25     :132   20     : 68  
+##  1000   :   3   99     :   4   80     : 89   10     :126   5      : 66  
+##  1500   :   3   10     :   2   90     : 59   50     : 92   25     : 55  
+##  (Other):  48   (Other):  18   60     : 54   30     : 69   50     : 36  
+##  NA&#39;s   :1147   NA&#39;s   :1167   (Other):505   (Other):348   (Other):332  
+##       AS10          AS11          AS12          AS13    
+##  0      :956   100    :447   0      :480   0      :873  
+##  10     : 63   50     : 95   20     : 92   10     : 51  
+##  5      : 54   80     : 80   10     : 78   5      : 51  
+##  NA     : 27   0      : 75   50     : 74   NA     : 51  
+##  1      : 15   90     : 72   25     : 64   20     : 35  
+##  20     : 15   75     : 56   5      : 56   25     : 28  
+##  (Other): 84   (Other):389   (Other):370   (Other):125</code></pre>
+</div>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/blog_Daniel/categories/r/">R</a></span>
+                <span class="separator"><a class="tag" href="/blog_Daniel/tags/psed/">PSED</a><a class="tag" href="/blog_Daniel/tags/dplyr/">dplyr</a><a class="tag" href="/blog_Daniel/tags/foreign/">foreign</a></span>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/blog_Daniel/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script></body>
+
+</html>

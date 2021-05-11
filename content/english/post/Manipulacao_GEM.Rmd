@@ -1,0 +1,104 @@
+---
+author: Daniel Pagotto
+date: "2021-04-27"
+description: Manipulação de dados GEM
+tags: ["GEM","dplyr", "tidyverse"]
+categories: ["R"]
+title: Manipulação de dados - GEM
+---
+
+Há alguns posts atrás aprendemos sobre o Global Entrepreneurship Monitor (GEM). Dá uma conferida no [post](https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/).  
+
+O **objetivo** desse post é **aplicar a manipulação de dados usando o GEM**. Você pode baixar a base por meio desse link!  
+
+Para iniciar, o primeiro passo é subir o GEM para o *Global Environment* do R.  
+
+```{r message=FALSE, warning=FALSE}
+library(readr)
+
+gem <- read_delim("paises_gem_serie.csv", 
+                    ";", escape_double = FALSE, col_types = cols(code = col_character()), 
+                    locale = locale(encoding = "ISO-8859-1", 
+                        asciify = TRUE), trim_ws = TRUE) 
+
+
+```
+
+
+## Explorando a base! 
+
+Agora que você tem a base, vamos explorar o que ela contém. Antes de qualquer trabalho de análise de dados secundários é **MUITO** importante verificar se a base possui um dicionário de dados para que você possa estudá-lo e entender o que cada variável significa. Sugiro fortemente que acesse aqui os dados do GEM. 
+
+Dito isso, vamos dar uma olhadinha na base usando o comando glimpse do pacote dplyr.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+
+glimpse(gem)
+
+```
+
+Olha só o quanto que o glimpse é legal. Ele mostra o número de linhas, o número de colunas, o nome da variável, o tipo e algumas das primeiras observações.
+
+
+### Função select
+
+Pelo próprio nome, a função select serve para você selecionar apenas variáveis que tem interesse. Vamos supor que dentre as 16 variáveis, você queira apenas algumas, o que podemos fazer? 
+
+```{r message=FALSE, warning=FALSE}
+
+gem_selecionados <- gem %>% 
+                      select(code, economy, continente, year, finance, gov_programs)
+
+## você também pode usar o sinal de (-) para manter todas as variáveis, menos aquelas indicadas 
+
+gem_selecionados2 <- gem %>% 
+                      select(-internal_market_dynamics, -physical_infraestruture)
+
+
+```
+
+### Função filter 
+
+A função filter permite a filtragem das observações a partir de algumas condições. Vamos ver alguns exemplos a seguir. 
+
+1) Filtrar observações do ano de 2015 ou subsequentes  
+2) Filtrar observações de países europeus 
+3) Filtrar observações que sejam de países europeus e maiores que 2013
+4) Filtrar observações que sejam do Brasil ou Chile
+
+
+```{r message=FALSE, warning=FALSE}
+
+# questão 1
+
+gem_filter1 <- gem %>% 
+                  filter(year >= 2015)
+
+## questão 2
+
+gem_filter2 <- gem %>% 
+                  filter(continente == "Europa")
+
+## questão 3 
+## Nesse caso usamos o conectivo e ("&") e ele vai pegar a intersecção das condicionais
+
+gem_filter3 <- gem %>% 
+                  filter(continente == "Europa" & year > 2013)
+
+## questão 4 
+## Nesse caso usamos o contectivo ou ("|") e ele vai pegar o complemento das condicionais
+
+gem_filter4 <- gem %>% 
+                  filter(economy == "Brazil" | economy == "Chile")
+
+
+```
+
+### Função group_by e summarise 
+
+
+
+
+
+

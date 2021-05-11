@@ -1,0 +1,93 @@
+---
+author: Daniel Pagotto
+date: "2021-04-27"
+description: Manipulação de dados GEM
+tags: ["GEM","dplyr", "tidyverse"]
+categories: ["R"]
+title: Manipulação de dados - GEM
+---
+
+
+
+<p>Há alguns posts atrás aprendemos sobre o Global Entrepreneurship Monitor (GEM). Dá uma conferida no <a href="https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/">post</a>.</p>
+<p>O <strong>objetivo</strong> desse post é <strong>aplicar a manipulação de dados usando o GEM</strong>. Você pode baixar a base por meio desse link!</p>
+<p>Para iniciar, o primeiro passo é subir o GEM para o <em>Global Environment</em> do R.</p>
+<pre class="r"><code>library(readr)
+
+gem &lt;- read_delim(&quot;paises_gem_serie.csv&quot;, 
+                    &quot;;&quot;, escape_double = FALSE, col_types = cols(code = col_character()), 
+                    locale = locale(encoding = &quot;ISO-8859-1&quot;, 
+                        asciify = TRUE), trim_ws = TRUE) </code></pre>
+<div id="explorando-a-base" class="section level2">
+<h2>Explorando a base!</h2>
+<p>Agora que você tem a base, vamos explorar o que ela contém. Antes de qualquer trabalho de análise de dados secundários é <strong>MUITO</strong> importante verificar se a base possui um dicionário de dados para que você possa estudá-lo e entender o que cada variável significa. Sugiro fortemente que acesse aqui os dados do GEM.</p>
+<p>Dito isso, vamos dar uma olhadinha na base usando o comando glimpse do pacote dplyr.</p>
+<pre class="r"><code>library(tidyverse)
+
+glimpse(gem)</code></pre>
+<pre><code>## Rows: 150
+## Columns: 16
+## $ code                                 &lt;chr&gt; &quot;55&quot;, &quot;55&quot;, &quot;55&quot;, &quot;55&quot;, &quot;55&quot;, &quot;55~
+## $ economy                              &lt;chr&gt; &quot;Brazil&quot;, &quot;Brazil&quot;, &quot;Brazil&quot;, &quot;Br~
+## $ continente                           &lt;chr&gt; &quot;América&quot;, &quot;América&quot;, &quot;América&quot;, ~
+## $ year                                 &lt;dbl&gt; 2019, 2018, 2017, 2016, 2015, 201~
+## $ finance                              &lt;dbl&gt; 2.93, 2.92, 2.59, 2.65, 2.36, 2.4~
+## $ gov_support                          &lt;dbl&gt; 2.50, 1.78, 1.87, 2.11, 2.20, 2.4~
+## $ taxes_bureaucracy                    &lt;dbl&gt; 1.87, 1.45, 1.58, 1.49, 1.53, 1.4~
+## $ gov_programs                         &lt;dbl&gt; 2.56, 2.08, 1.95, 2.06, 2.07, 2.2~
+## $ basic_school_entrepreneurship        &lt;dbl&gt; 1.78, 1.54, 1.46, 1.42, 1.42, 1.4~
+## $ university_entrepreneurial_education &lt;dbl&gt; 2.67, 2.46, 2.42, 2.42, 2.33, 2.5~
+## $ r_d_transfer                         &lt;dbl&gt; 2.25, 2.12, 1.84, 1.84, 1.79, 2.0~
+## $ commercial_infraestructure           &lt;dbl&gt; 2.82, 2.69, 2.58, 2.70, 2.52, 2.5~
+## $ internal_market_dynamics             &lt;dbl&gt; 3.44, 3.46, 3.66, 3.42, 3.04, 3.3~
+## $ internal_market_openness             &lt;dbl&gt; 2.49, 2.20, 2.20, 2.23, 2.09, 2.2~
+## $ physical_infraestruture              &lt;dbl&gt; 3.23, 3.22, 3.13, 2.80, 2.88, 2.9~
+## $ cultural_social_norms                &lt;dbl&gt; 2.47, 2.10, 2.19, 2.34, 2.38, 2.3~</code></pre>
+<p>Olha só o quanto que o glimpse é legal. Ele mostra o número de linhas, o número de colunas, o nome da variável, o tipo e algumas das primeiras observações.</p>
+<div id="função-select" class="section level3">
+<h3>Função select</h3>
+<p>Pelo próprio nome, a função select serve para você selecionar apenas variáveis que tem interesse. Vamos supor que dentre as 16 variáveis, você queira apenas algumas, o que podemos fazer?</p>
+<pre class="r"><code>gem_selecionados &lt;- gem %&gt;% 
+                      select(code, economy, continente, year, finance, gov_programs)
+
+## você também pode usar o sinal de (-) para manter todas as variáveis, menos aquelas indicadas 
+
+gem_selecionados2 &lt;- gem %&gt;% 
+                      select(-internal_market_dynamics, -physical_infraestruture)</code></pre>
+</div>
+<div id="função-filter" class="section level3">
+<h3>Função filter</h3>
+<p>A função filter permite a filtragem das observações a partir de algumas condições. Vamos ver alguns exemplos a seguir.</p>
+<ol style="list-style-type: decimal">
+<li>Filtrar observações do ano de 2015 ou subsequentes<br />
+</li>
+<li>Filtrar observações de países europeus</li>
+<li>Filtrar observações que sejam de países europeus e maiores que 2013</li>
+<li>Filtrar observações que sejam do Brasil ou Chile</li>
+</ol>
+<pre class="r"><code># questão 1
+
+gem_filter1 &lt;- gem %&gt;% 
+                  filter(year &gt;= 2015)
+
+## questão 2
+
+gem_filter2 &lt;- gem %&gt;% 
+                  filter(continente == &quot;Europa&quot;)
+
+## questão 3 
+## Nesse caso usamos o conectivo e (&quot;&amp;&quot;) e ele vai pegar a intersecção das condicionais
+
+gem_filter3 &lt;- gem %&gt;% 
+                  filter(continente == &quot;Europa&quot; &amp; year &gt; 2013)
+
+## questão 4 
+## Nesse caso usamos o contectivo ou (&quot;|&quot;) e ele vai pegar o complemento das condicionais
+
+gem_filter4 &lt;- gem %&gt;% 
+                  filter(economy == &quot;Brazil&quot; | economy == &quot;Chile&quot;)</code></pre>
+</div>
+<div id="função-group_by-e-summarise" class="section level3">
+<h3>Função group_by e summarise</h3>
+</div>
+</div>

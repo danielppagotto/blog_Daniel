@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danielppagotto.github.io/blog_Daniel/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Esse aqui sou eu!</title>
+      <link>https://danielppagotto.github.io/blog_Daniel/eu/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielppagotto.github.io/blog_Daniel/eu/</guid>
+      <description>Olá! Meu nome é Daniel Pagotto!
+Aqui eu escrevo basicamente sobre R e algumas aplicações voltadas para alguns campos de estudo: empreendedorismo, inovação e gestão de modo geral!</description>
+    </item>
+    
+    <item>
       <title>Explorando o PSED 2</title>
       <link>https://danielppagotto.github.io/blog_Daniel/post/post-3-explorando-psed/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
@@ -44,12 +54,12 @@
     </item>
     
     <item>
-      <title>Sobre o autor</title>
+      <title>Palavras motivadoras iniciais!</title>
       <link>https://danielppagotto.github.io/blog_Daniel/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://danielppagotto.github.io/blog_Daniel/about/</guid>
-      <description>Olá! Meu nome é Daniel do Prado Pagotto! Sou mestre e bacharel em administração e sou encantado pela área de dados e estatística.</description>
+      <description>Sou mestre e bacharel em administração e sou encantado pela área de dados e estatística.</description>
     </item>
     
   </channel>

@@ -1,16 +1,17 @@
 ---
 author: Daniel Pagotto
 date: "2021-04-27"
-description: Manipulando o PSED
+description: Lendo o PSED
 tags: ["PSED","dplyr","foreign"]
 categories: ["R"]
-title: Explorando o PSED 2
+title: Lendo o PSED 2
 ---
 
 Há alguns posts atrás aprendemos sobre o Panel Study of Entrepreneurial Dynamics (PSED 2). Dá uma conferida no [post](https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/).  
 
-O **objetivo** desse post é **apresentar conceitos de um pacote muuuuito importante do R que é o dplyr por meio da exploração do PSED 2**. O dplyr faz parte de uma coleção de pacotes chamado [tidyverse](https://www.tidyverse.org/), muito útil na manipulação e visualização de dados. 
+O **objetivo** desse post é **ler o PSED 2**. Sim, eu sei! Pode parecer super simples, mas isso é um primeiro passo que as vezes trava muito o pessoal no começo! 
 
+Para iniciar
 
 Para iniciar, o primeiro passo é subir o PSED2 para o *Global Environment* do R. Aqui entra o primeiro ensinamento! A base o PSED está em formato .sav, que é um formato de arquivo próprio do SPSS. Para abrir a base, portanto, é necessário incluir um pacote que permite abrir esse tipo de arquivo, que nessa ocasião será o *foreign*.  
 

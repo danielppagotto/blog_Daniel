@@ -6,12 +6,12 @@ aliases:
 author: Hugo Authors
 date: "2019-02-28"
 description: Hugo, the world's fastest framework for building websites
-title: Sobre o autor
+title: Palavras motivadoras iniciais! 
 ---
 
-Olá! Meu nome é **Daniel do Prado Pagotto**! Sou mestre e bacharel em administração e sou encantado pela área de dados e estatística. Há pouco mais de dois anos venho trabalhando quase que diariamente com análise de dados associados a alguns campos de atuação, como **gestão do trabalho em saúde, empreendedorismo e inovação**. Todo meu trabalho tem se baseado primordialmente na linguagem R.    
+Sou mestre e bacharel em administração e sou encantado pela área de dados e estatística. Há pouco mais de dois anos venho trabalhando quase que diariamente com análise de dados associados a alguns campos de atuação, como **gestão do trabalho em saúde, empreendedorismo e inovação**. Todo meu trabalho tem se baseado primordialmente na linguagem R.    
 
-Apesar do grande interesse, **sempre foi desafiador trabalhar nessa área**, pois os cursos de administração no Brasil ainda não possuem formações específicas que contribuam para esse campo. Ao longo dos últimos anos, aprendi muita coisa por meio do disciplinas optativas durantes a graduação/mestrado, livros, tutoriais da internet, cursos da plataforma Datacamp e comunidades de R/estatística. 
+Apesar do grande interesse, **sempre foi MUITO desafiador trabalhar nessa área**, pois os cursos de administração no Brasil ainda não possuem formações específicas que contribuam para esse campo. Ao longo dos últimos anos, aprendi muita coisa por meio do disciplinas optativas durantes a graduação/mestrado, livros, tutoriais da internet, cursos da plataforma Datacamp e comunidades de R/estatística. 
 
 Portanto, esse blog nasceu para **transferir todo conhecimento que eu tenho acumulado em análise de dados, sobretudo por meio da aplicação da linguagem R às áreas correlatas à minha formação/atuação**. Isso, no entanto, **não exclui a possibilidade de qualquer outra área aprender R a partir dos ensinamentos aqui transmitidos**. 
 

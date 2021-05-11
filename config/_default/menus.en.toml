@@ -1,17 +1,24 @@
+
   [[main]]
-  name = "Home"
+  name = "Últimos posts"
   identifier = "home"
   weight = 100
   url = "/"
 
   [[main]]
-  name = "Posts"
+  name = "Todos os posts"
   weight = 200
   identifier = "posts"
   url = "/post/"
 
   [[main]]
-  name = "Sobre"
+  name = "Palavras iniciais"
   weight = 300
   identifier = "about"
   url = "/about/"
+
+  [[main]]
+  name = "Sou eu!"
+  weight = 300
+  identifier = "Sou eu!"
+  url = "/eu/"

@@ -97,7 +97,7 @@ gem_filter4 <- gem %>%
 
 ### Função group_by e summarise 
 
-
+Agora vamos dar uma olhada na função group_by 
 
 
 

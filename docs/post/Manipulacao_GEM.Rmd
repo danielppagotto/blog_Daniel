@@ -95,10 +95,85 @@ gem_filter4 <- gem %>%
 
 ```
 
-### Função group_by e summarise 
+### Função mutate 
 
-Agora vamos dar uma olhada na função group_by 
+A função mutate é bem útil, pois permite criar novas variáveis! 
+
+Vamos supor que a gente tenha a seguinte situação: quero criar uma variável chamada entrepreneurship_education_level que corresponde à média entre as variáveis que indicam o grau da educação empreendedora nos níveis universitário e escolar. 
+
+Para isso, usamos a função mutate! 
+
+```{r}
+gem_education <- gem %>% 
+  mutate(entrepreneurship_education_level = (basic_school_entrepreneurship + university_entrepreneurial_education)/2)
 
 
+```
+
+Veja que agora temos uma nova variável ao final do dataframe com o resultado de mutate! 
+
+
+### Função group_by e summarise
+
+Agora vamos dar uma olhada em duas funções de uma vez, que são a group_by e summarize. 
+
+Para fins didáticos, vou fazer uns filters aqui antes de aplicar o exemplo dessas duas novas funções. 
+
+```{r}
+gem_exemplo <- gem %>% 
+  filter(continente == "América" & year > 2016) %>% 
+  select(economy, year, finance, gov_support)
+
+gem_exemplo
+
+```
+
+Veja lá! Primeiro filtrei os países da base que estão no continente americano e peguei os registros que são maiores que 2016. Depois selecionei as variáveis economia, ano, finança e suporte governamental. 
+
+Vamos supor que eu queira uma média desses anos que estão listados para os dois índices, finanças e suporte governamental, de cada país. Para isso, vamos aplicar uma operação chamada group_by! 
+
+Nesse caso, vou agrupar pela coluna economy. Em outras palavras, cada registro que for igual vira apenas um (esses três registros de Brazil viram um) e, em sequência, é calculada uma média por meio da função summarize. 
+
+Vamos ver como é feito! 
+
+```{r}
+gem_exemplo %>%  
+  group_by(economy) %>% 
+  summarise(finance_avg = mean(finance), 
+            gov_support_avg = mean(gov_support))
+
+
+```
+Vamos supor a seguinte situação. Você quer contar quantas observações nós temos por país. Eu posso usar o seguinte: 
+
+```{r}
+gem %>%  
+  group_by(economy) %>% 
+  summarise(cont = n())
+```
+
+Note que o resultado foi 10 para tudo. Anteriormente, eu já havia feito um tratamento para pegar apenas países que tinham completado coletas de 2010 a 2019. 
+
+
+### Função arrange 
+
+A última função é bem tranquila! Vamos supor que vc queira ordenar a base de dados com base em alguma variável. Vamos usar a função arrange. Vou usar a base original para esse exemplo.
+
+```{r}
+## Vou ordenar os países no ano de 2019, em ordem crescente, pela variável finance
+
+gem %>% 
+  filter(year == 2019) %>% 
+  arrange(finance)
+
+## Vou ordenar os países no ano de 2019, em ordem decrescente, pela variável finance 
+
+gem %>% 
+  filter(year == 2019) %>% 
+  arrange(desc(finance))
+
+```
+
+O pacote dplyr é muito rico! Veremos outras funções em outras oportunidades. Porém, com o que vimos aqui conseguimos usar muita coisa bacana! 
 
 

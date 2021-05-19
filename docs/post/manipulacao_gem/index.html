@@ -168,7 +168,7 @@
                                                 27/4/2021
                                            </span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">3-minute read</span>
+                        <span class="reading-time">8-minute read</span>
                     </div>
                 
             </div>
@@ -254,8 +254,140 @@ gem_filter3 &lt;- gem %&gt;%
 gem_filter4 &lt;- gem %&gt;% 
                   filter(economy == &quot;Brazil&quot; | economy == &quot;Chile&quot;)</code></pre>
 </div>
+<div id="função-mutate" class="section level3">
+<h3>Função mutate</h3>
+<p>A função mutate é bem útil, pois permite criar novas variáveis!</p>
+<p>Vamos supor que a gente tenha a seguinte situação: quero criar uma variável chamada entrepreneurship_education_level que corresponde à média entre as variáveis que indicam o grau da educação empreendedora nos níveis universitário e escolar.</p>
+<p>Para isso, usamos a função mutate!</p>
+<pre class="r"><code>gem_education &lt;- gem %&gt;% 
+  mutate(entrepreneurship_education_level = (basic_school_entrepreneurship + university_entrepreneurial_education)/2)</code></pre>
+<p>Veja que agora temos uma nova variável ao final do dataframe com o resultado de mutate!</p>
+</div>
 <div id="função-group_by-e-summarise" class="section level3">
 <h3>Função group_by e summarise</h3>
+<p>Agora vamos dar uma olhada em duas funções de uma vez, que são a group_by e summarize.</p>
+<p>Para fins didáticos, vou fazer uns filters aqui antes de aplicar o exemplo dessas duas novas funções.</p>
+<pre class="r"><code>gem_exemplo &lt;- gem %&gt;% 
+  filter(continente == &quot;América&quot; &amp; year &gt; 2016) %&gt;% 
+  select(economy, year, finance, gov_support)
+
+gem_exemplo</code></pre>
+<pre><code>## # A tibble: 12 x 4
+##    economy   year finance gov_support
+##    &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;
+##  1 Brazil    2019    2.93        2.5 
+##  2 Brazil    2018    2.92        1.78
+##  3 Brazil    2017    2.59        1.87
+##  4 Chile     2019    2.42        2.88
+##  5 Chile     2018    2.35        3.14
+##  6 Chile     2017    2.18        2.49
+##  7 Colombia  2019    2.23        2.97
+##  8 Colombia  2018    1.97        2.31
+##  9 Colombia  2017    2.15        2.36
+## 10 Mexico    2019    2.6         2.55
+## 11 Mexico    2018    2.41        2.74
+## 12 Mexico    2017    2.6         3.18</code></pre>
+<p>Veja lá! Primeiro filtrei os países da base que estão no continente americano e peguei os registros que são maiores que 2016. Depois selecionei as variáveis economia, ano, finança e suporte governamental.</p>
+<p>Vamos supor que eu queira uma média desses anos que estão listados para os dois índices, finanças e suporte governamental, de cada país. Para isso, vamos aplicar uma operação chamada group_by!</p>
+<p>Nesse caso, vou agrupar pela coluna economy. Em outras palavras, cada registro que for igual vira apenas um (esses três registros de Brazil viram um) e, em sequência, é calculada uma média por meio da função summarize.</p>
+<p>Vamos ver como é feito!</p>
+<pre class="r"><code>gem_exemplo %&gt;%  
+  group_by(economy) %&gt;% 
+  summarise(finance_avg = mean(finance), 
+            gov_support_avg = mean(gov_support))</code></pre>
+<pre><code>## # A tibble: 4 x 3
+##   economy  finance_avg gov_support_avg
+##   &lt;chr&gt;          &lt;dbl&gt;           &lt;dbl&gt;
+## 1 Brazil          2.81            2.05
+## 2 Chile           2.32            2.84
+## 3 Colombia        2.12            2.55
+## 4 Mexico          2.54            2.82</code></pre>
+<p>Vamos supor a seguinte situação. Você quer contar quantas observações nós temos por país. Eu posso usar o seguinte:</p>
+<pre class="r"><code>gem %&gt;%  
+  group_by(economy) %&gt;% 
+  summarise(cont = n())</code></pre>
+<pre><code>## # A tibble: 15 x 2
+##    economy         cont
+##    &lt;chr&gt;          &lt;int&gt;
+##  1 Brazil            10
+##  2 Chile             10
+##  3 Colombia          10
+##  4 Croatia           10
+##  5 Germany           10
+##  6 Greece            10
+##  7 Iran              10
+##  8 Ireland           10
+##  9 Mexico            10
+## 10 Slovenia          10
+## 11 Spain             10
+## 12 Sweden            10
+## 13 Switzerland       10
+## 14 Taiwan            10
+## 15 United Kingdom    10</code></pre>
+<p>Note que o resultado foi 10 para tudo. Anteriormente, eu já havia feito um tratamento para pegar apenas países que tinham completado coletas de 2010 a 2019.</p>
+</div>
+<div id="função-arrange" class="section level3">
+<h3>Função arrange</h3>
+<p>A última função é bem tranquila! Vamos supor que vc queira ordenar a base de dados com base em alguma variável. Vamos usar a função arrange. Vou usar a base original para esse exemplo.</p>
+<pre class="r"><code>## Vou ordenar os países no ano de 2019, em ordem crescente, pela variável finance
+
+gem %&gt;% 
+  filter(year == 2019) %&gt;% 
+  arrange(finance)</code></pre>
+<pre><code>## # A tibble: 15 x 16
+##    code  economy        continente  year finance gov_support taxes_bureaucracy
+##    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;             &lt;dbl&gt;
+##  1 98    Iran           Ásia        2019    2.16        2.11              2.21
+##  2 57    Colombia       América     2019    2.23        2.97              2.16
+##  3 56    Chile          América     2019    2.42        2.88              2.85
+##  4 30    Greece         Europa      2019    2.52        2.4               1.88
+##  5 261   Mexico         América     2019    2.6         2.55              2.38
+##  6 385   Croatia        Europa      2019    2.7         2.14              1.92
+##  7 386   Slovenia       Europa      2019    2.81        2.61              2.37
+##  8 55    Brazil         América     2019    2.93        2.5               1.87
+##  9 353   Ireland        Europa      2019    2.93        2.56              2.76
+## 10 34    Spain          Europa      2019    3           3.26              3.1 
+## 11 46    Sweden         Europa      2019    3.07        2.37              2.37
+## 12 49    Germany        Europa      2019    3.13        2.6               2.64
+## 13 44    United Kingdom Europa      2019    3.13        2.61              3.05
+## 14 41    Switzerland    Europa      2019    3.24        3.39              3.51
+## 15 886   Taiwan         Ásia        2019    3.27        3.42              3.2 
+## # ... with 9 more variables: gov_programs &lt;dbl&gt;,
+## #   basic_school_entrepreneurship &lt;dbl&gt;,
+## #   university_entrepreneurial_education &lt;dbl&gt;, r_d_transfer &lt;dbl&gt;,
+## #   commercial_infraestructure &lt;dbl&gt;, internal_market_dynamics &lt;dbl&gt;,
+## #   internal_market_openness &lt;dbl&gt;, physical_infraestruture &lt;dbl&gt;,
+## #   cultural_social_norms &lt;dbl&gt;</code></pre>
+<pre class="r"><code>## Vou ordenar os países no ano de 2019, em ordem decrescente, pela variável finance 
+
+gem %&gt;% 
+  filter(year == 2019) %&gt;% 
+  arrange(desc(finance))</code></pre>
+<pre><code>## # A tibble: 15 x 16
+##    code  economy        continente  year finance gov_support taxes_bureaucracy
+##    &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;             &lt;dbl&gt;
+##  1 886   Taiwan         Ásia        2019    3.27        3.42              3.2 
+##  2 41    Switzerland    Europa      2019    3.24        3.39              3.51
+##  3 49    Germany        Europa      2019    3.13        2.6               2.64
+##  4 44    United Kingdom Europa      2019    3.13        2.61              3.05
+##  5 46    Sweden         Europa      2019    3.07        2.37              2.37
+##  6 34    Spain          Europa      2019    3           3.26              3.1 
+##  7 55    Brazil         América     2019    2.93        2.5               1.87
+##  8 353   Ireland        Europa      2019    2.93        2.56              2.76
+##  9 386   Slovenia       Europa      2019    2.81        2.61              2.37
+## 10 385   Croatia        Europa      2019    2.7         2.14              1.92
+## 11 261   Mexico         América     2019    2.6         2.55              2.38
+## 12 30    Greece         Europa      2019    2.52        2.4               1.88
+## 13 56    Chile          América     2019    2.42        2.88              2.85
+## 14 57    Colombia       América     2019    2.23        2.97              2.16
+## 15 98    Iran           Ásia        2019    2.16        2.11              2.21
+## # ... with 9 more variables: gov_programs &lt;dbl&gt;,
+## #   basic_school_entrepreneurship &lt;dbl&gt;,
+## #   university_entrepreneurial_education &lt;dbl&gt;, r_d_transfer &lt;dbl&gt;,
+## #   commercial_infraestructure &lt;dbl&gt;, internal_market_dynamics &lt;dbl&gt;,
+## #   internal_market_openness &lt;dbl&gt;, physical_infraestruture &lt;dbl&gt;,
+## #   cultural_social_norms &lt;dbl&gt;</code></pre>
+<p>O pacote dplyr é muito rico! Veremos outras funções em outras oportunidades. Porém, com o que vimos aqui conseguimos usar muita coisa bacana!</p>
 </div>
 </div>
 </div>

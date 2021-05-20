@@ -29,7 +29,7 @@ gem <- read_delim("paises_gem_serie.csv",
 
 Agora que você tem a base, vamos explorar o que ela contém. Antes de qualquer trabalho de análise de dados secundários é **MUITO** importante verificar se a base possui um dicionário de dados para que você possa estudá-lo e entender o que cada variável significa. Sugiro fortemente que acesse aqui os dados do GEM. 
 
-Dito isso, vamos dar uma olhadinha na base usando o comando glimpse do pacote dplyr.
+Dito isso, vamos dar uma **olhadinha** na base usando o **comando glimpse** do pacote dplyr.
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -38,12 +38,12 @@ glimpse(gem)
 
 ```
 
-Olha só o quanto que o glimpse é legal. Ele mostra o número de linhas, o número de colunas, o nome da variável, o tipo e algumas das primeiras observações.
+Olha só o quanto que o **glimpse** é legal. Ele **mostra o número de linhas, o número de colunas, o nome da variável, o tipo e algumas das primeiras observações**.
 
 
 ### Função select
 
-Pelo próprio nome, a função select serve para você selecionar apenas variáveis que tem interesse. Vamos supor que dentre as 16 variáveis, você queira apenas algumas, o que podemos fazer? 
+Pelo próprio nome, a função **select** serve para você **selecionar apenas variáveis que tem interesse**. Vamos supor que dentre as 16 variáveis, você queira apenas algumas, o que podemos fazer? 
 
 ```{r message=FALSE, warning=FALSE}
 
@@ -60,7 +60,7 @@ gem_selecionados2 <- gem %>%
 
 ### Função filter 
 
-A função filter permite a filtragem das observações a partir de algumas condições. Vamos ver alguns exemplos a seguir. 
+A função **filter** permite a **filtragem das observações a partir de algumas condições**. Vamos ver alguns exemplos a seguir. 
 
 1) Filtrar observações do ano de 2015 ou subsequentes  
 2) Filtrar observações de países europeus 
@@ -97,7 +97,7 @@ gem_filter4 <- gem %>%
 
 ### Função mutate 
 
-A função mutate é bem útil, pois permite criar novas variáveis! 
+A função **mutate** é bem útil, pois **permite criar novas variáveis**! 
 
 Vamos supor que a gente tenha a seguinte situação: quero criar uma variável chamada entrepreneurship_education_level que corresponde à média entre as variáveis que indicam o grau da educação empreendedora nos níveis universitário e escolar. 
 
@@ -115,7 +115,7 @@ Veja que agora temos uma nova variável ao final do dataframe com o resultado de
 
 ### Função group_by e summarise
 
-Agora vamos dar uma olhada em duas funções de uma vez, que são a group_by e summarize. 
+Agora vamos dar uma olhada em duas funções de uma vez, que são a **group_by e summarize**. 
 
 Para fins didáticos, vou fazer uns filters aqui antes de aplicar o exemplo dessas duas novas funções. 
 
@@ -159,14 +159,19 @@ Note que o resultado foi 10 para tudo. Anteriormente, eu já havia feito um trat
 
 A última função é bem tranquila! Vamos supor que vc queira ordenar a base de dados com base em alguma variável. Vamos usar a função arrange. Vou usar a base original para esse exemplo.
 
+Vou ordenar os países no ano de 2019, em ordem crescente, pela variável finance
+
 ```{r}
-## Vou ordenar os países no ano de 2019, em ordem crescente, pela variável finance
 
 gem %>% 
   filter(year == 2019) %>% 
-  arrange(finance)
+  arrange(desc(finance))
 
-## Vou ordenar os países no ano de 2019, em ordem decrescente, pela variável finance 
+```
+
+Vou ordenar os países no ano de 2019, em ordem decrescente, pela variável finance 
+
+```{r}
 
 gem %>% 
   filter(year == 2019) %>% 

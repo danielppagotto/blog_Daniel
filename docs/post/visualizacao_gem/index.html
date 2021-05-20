@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html  dir="ltr" lang="en" data-theme=""><head>
-    <title> Daniel Pagotto | Manipulação de dados - GEM </title>
+    <title> Daniel Pagotto | Visualização de dados - GEM </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -32,7 +32,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/blog_Daniel/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/blog_Daniel/favicon-16x16.png">
 
-    <link rel="canonical" href="/blog_Daniel/post/manipulacao_gem/">
+    <link rel="canonical" href="/blog_Daniel/post/visualizacao_gem/">
 
     
     
@@ -55,7 +55,7 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://danielppagotto.github.io/blog_Daniel/images/foto-daniel.jpg"/>
 
-<meta name="twitter:title" content="Manipulação de dados - GEM"/>
+<meta name="twitter:title" content="Visualização de dados - GEM"/>
 <meta name="twitter:description" content="Manipulação de dados GEM"/>
 
 
@@ -160,15 +160,15 @@
         <div class="post-content">
             
             <div class="post-title">
-                <h3>Manipulação de dados - GEM</h3>
+                <h3>Visualização de dados - GEM</h3>
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
                         <span class="date"> 
-                                                27/4/2021
+                                                19/5/2021
                                            </span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">8-minute read</span>
+                        <span class="reading-time">6-minute read</span>
                     </div>
                 
             </div>
@@ -177,7 +177,7 @@
 
 
 <p>Há alguns posts atrás aprendemos sobre o Global Entrepreneurship Monitor (GEM). Dá uma conferida no <a href="https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/">post</a>.</p>
-<p>O <strong>objetivo</strong> desse post é <strong>aplicar a manipulação de dados usando o GEM</strong>. Você pode baixar a base por meio desse link!</p>
+<p>O <strong>objetivo</strong> desse post é <strong>aplicar a visualização de dados ao GEM</strong>. Você pode baixar a base por meio desse link! Essa é uma base que preparei especialmente para esse curso. A base completa está no site do <a href="https://www.gemconsortium.org/">GEM</a>.</p>
 <p>Para iniciar, o primeiro passo é subir o GEM para o <em>Global Environment</em> do R.</p>
 <pre class="r"><code>library(readr)
 
@@ -187,73 +187,22 @@ gem &lt;- read_delim(&quot;paises_gem_serie.csv&quot;,
                         asciify = TRUE), trim_ws = TRUE) </code></pre>
 <div id="explorando-a-base" class="section level2">
 <h2>Explorando a base!</h2>
-<p>Agora que você tem a base, vamos explorar o que ela contém. Antes de qualquer trabalho de análise de dados secundários é <strong>MUITO</strong> importante verificar se a base possui um dicionário de dados para que você possa estudá-lo e entender o que cada variável significa. Sugiro fortemente que acesse aqui os dados do GEM.</p>
-<p>Dito isso, vamos dar uma <strong>olhadinha</strong> na base usando o <strong>comando glimpse</strong> do pacote dplyr.</p>
+<p>Em um post passado aprendemos a manipular o GEM. Alguns conceitos de manipulação serão usados aqui!</p>
+<p>Vamos separar a base de modo que tenhamos só observações do ano de 2019.</p>
 <pre class="r"><code>library(tidyverse)
 
-glimpse(gem)</code></pre>
-<pre><code>## Rows: 150
-## Columns: 16
-## $ code                                 &lt;chr&gt; &quot;55&quot;, &quot;55&quot;, &quot;55&quot;, &quot;55&quot;, &quot;55&quot;, &quot;55~
-## $ economy                              &lt;chr&gt; &quot;Brazil&quot;, &quot;Brazil&quot;, &quot;Brazil&quot;, &quot;Br~
-## $ continente                           &lt;chr&gt; &quot;América&quot;, &quot;América&quot;, &quot;América&quot;, ~
-## $ year                                 &lt;dbl&gt; 2019, 2018, 2017, 2016, 2015, 201~
-## $ finance                              &lt;dbl&gt; 2.93, 2.92, 2.59, 2.65, 2.36, 2.4~
-## $ gov_support                          &lt;dbl&gt; 2.50, 1.78, 1.87, 2.11, 2.20, 2.4~
-## $ taxes_bureaucracy                    &lt;dbl&gt; 1.87, 1.45, 1.58, 1.49, 1.53, 1.4~
-## $ gov_programs                         &lt;dbl&gt; 2.56, 2.08, 1.95, 2.06, 2.07, 2.2~
-## $ basic_school_entrepreneurship        &lt;dbl&gt; 1.78, 1.54, 1.46, 1.42, 1.42, 1.4~
-## $ university_entrepreneurial_education &lt;dbl&gt; 2.67, 2.46, 2.42, 2.42, 2.33, 2.5~
-## $ r_d_transfer                         &lt;dbl&gt; 2.25, 2.12, 1.84, 1.84, 1.79, 2.0~
-## $ commercial_infraestructure           &lt;dbl&gt; 2.82, 2.69, 2.58, 2.70, 2.52, 2.5~
-## $ internal_market_dynamics             &lt;dbl&gt; 3.44, 3.46, 3.66, 3.42, 3.04, 3.3~
-## $ internal_market_openness             &lt;dbl&gt; 2.49, 2.20, 2.20, 2.23, 2.09, 2.2~
-## $ physical_infraestruture              &lt;dbl&gt; 3.23, 3.22, 3.13, 2.80, 2.88, 2.9~
-## $ cultural_social_norms                &lt;dbl&gt; 2.47, 2.10, 2.19, 2.34, 2.38, 2.3~</code></pre>
-<p>Olha só o quanto que o <strong>glimpse</strong> é legal. Ele <strong>mostra o número de linhas, o número de colunas, o nome da variável, o tipo e algumas das primeiras observações</strong>.</p>
-<div id="função-select" class="section level3">
-<h3>Função select</h3>
-<p>Pelo próprio nome, a função <strong>select</strong> serve para você <strong>selecionar apenas variáveis que tem interesse</strong>. Vamos supor que dentre as 16 variáveis, você queira apenas algumas, o que podemos fazer?</p>
-<pre class="r"><code>gem_selecionados &lt;- gem %&gt;% 
-                      select(code, economy, continente, year, finance, gov_programs)
-
-## você também pode usar o sinal de (-) para manter todas as variáveis, menos aquelas indicadas 
-
-gem_selecionados2 &lt;- gem %&gt;% 
-                      select(-internal_market_dynamics, -physical_infraestruture)</code></pre>
-</div>
-<div id="função-filter" class="section level3">
-<h3>Função filter</h3>
-<p>A função <strong>filter</strong> permite a <strong>filtragem das observações a partir de algumas condições</strong>. Vamos ver alguns exemplos a seguir.</p>
-<ol style="list-style-type: decimal">
-<li>Filtrar observações do ano de 2015 ou subsequentes<br />
-</li>
-<li>Filtrar observações de países europeus</li>
-<li>Filtrar observações que sejam de países europeus e maiores que 2013</li>
-<li>Filtrar observações que sejam do Brasil ou Chile</li>
-</ol>
-<pre class="r"><code># questão 1
-
-gem_filter1 &lt;- gem %&gt;% 
-                  filter(year &gt;= 2015)
-
-## questão 2
-
-gem_filter2 &lt;- gem %&gt;% 
-                  filter(continente == &quot;Europa&quot;)
-
-## questão 3 
-## Nesse caso usamos o conectivo e (&quot;&amp;&quot;) e ele vai pegar a intersecção das condicionais
-
-gem_filter3 &lt;- gem %&gt;% 
-                  filter(continente == &quot;Europa&quot; &amp; year &gt; 2013)
-
-## questão 4 
-## Nesse caso usamos o contectivo ou (&quot;|&quot;) e ele vai pegar o complemento das condicionais
-
-gem_filter4 &lt;- gem %&gt;% 
-                  filter(economy == &quot;Brazil&quot; | economy == &quot;Chile&quot;)</code></pre>
-</div>
+gem_2019 &lt;- gem %&gt;% 
+              filter(year == 2019)</code></pre>
+<p>Agora apresento o pacote ggplot2! O ggplot2 é um pacote super versátil que permite construir gráficos!
+O ggplot2 segue uma lógica de camadas! (Isso vai ficar bem claro com os exemplos)</p>
+<p>Para começar, vamos criar um boxplot do variável finance da base que criamos.</p>
+<pre class="r"><code>gem_2019 %&gt;% 
+  ggplot(aes(y=finance)) + geom_boxplot()</code></pre>
+<p><img src="/blog_Daniel/english/post/Visualizacao_GEM_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Como eu disse, o ggplot2 possui uma estrutura em camadas! Olha o que acontece se eu trocar o argumento do boxplot por violin.</p>
+<pre class="r"><code>gem_2019 %&gt;% 
+  ggplot(aes(x=finance)) + geom_histogram()</code></pre>
+<p><img src="/blog_Daniel/english/post/Visualizacao_GEM_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <div id="função-mutate" class="section level3">
 <h3>Função mutate</h3>
 <p>A função <strong>mutate</strong> é bem útil, pois <strong>permite criar novas variáveis</strong>!</p>
@@ -392,7 +341,7 @@ gem_exemplo</code></pre>
         <div class="post-footer">
             <div class="info">
                 <span class="separator"><a class="category" href="/blog_Daniel/categories/r/">R</a></span>
-                <span class="separator"><a class="tag" href="/blog_Daniel/tags/gem/">GEM</a><a class="tag" href="/blog_Daniel/tags/dplyr/">dplyr</a><a class="tag" href="/blog_Daniel/tags/tidyverse/">tidyverse</a></span>
+                <span class="separator"><a class="tag" href="/blog_Daniel/tags/gem/">GEM</a><a class="tag" href="/blog_Daniel/tags/ggplot/">ggplot</a><a class="tag" href="/blog_Daniel/tags/tidyverse/">tidyverse</a></span>
             </div>
         </div>
 

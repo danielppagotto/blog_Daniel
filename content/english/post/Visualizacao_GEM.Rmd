@@ -1,17 +1,17 @@
 ---
 author: Daniel Pagotto
-date: "2021-04-27"
+date: "2021-05-19"
 description: Manipulação de dados GEM
-tags: ["GEM","dplyr", "tidyverse"]
+tags: ["GEM","ggplot", "tidyverse"]
 categories: ["R"]
-title: Manipulação de dados - GEM
+title: Visualização de dados - GEM
 ---
 
 Há alguns posts atrás aprendemos sobre o Global Entrepreneurship Monitor (GEM). Dá uma conferida no [post](https://danielppagotto.github.io/blog_Daniel/post/post-2-bases1/).  
 
-O **objetivo** desse post é **aplicar a manipulação de dados usando o GEM**. Você pode baixar a base por meio desse link!  
+O **objetivo** desse post é **aplicar a visualização de dados ao GEM**. Você pode baixar a base por meio desse link! Essa é uma base que preparei especialmente para esse curso. A base completa está no site do [GEM](https://www.gemconsortium.org/). 
 
-Para iniciar, o primeiro passo é subir o GEM para o *Global Environment* do R.  
+Para iniciar, o primeiro passo é subir o GEM para o *Global Environment* do R.
 
 ```{r message=FALSE, warning=FALSE}
 library(readr)
@@ -27,71 +27,37 @@ gem <- read_delim("paises_gem_serie.csv",
 
 ## Explorando a base! 
 
-Agora que você tem a base, vamos explorar o que ela contém. Antes de qualquer trabalho de análise de dados secundários é **MUITO** importante verificar se a base possui um dicionário de dados para que você possa estudá-lo e entender o que cada variável significa. Sugiro fortemente que acesse aqui os dados do GEM. 
+Em um post passado aprendemos a manipular o GEM. Alguns conceitos de manipulação serão usados aqui! 
 
-Dito isso, vamos dar uma **olhadinha** na base usando o **comando glimpse** do pacote dplyr.
+Vamos separar a base de modo que tenhamos só observações do ano de 2019.
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 
-glimpse(gem)
-
+gem_2019 <- gem %>% 
+              filter(year == 2019)
 ```
 
-Olha só o quanto que o **glimpse** é legal. Ele **mostra o número de linhas, o número de colunas, o nome da variável, o tipo e algumas das primeiras observações**.
+Agora apresento o pacote ggplot2! O ggplot2 é um pacote super versátil que permite construir gráficos! 
+O ggplot2 segue uma lógica de camadas! (Isso vai ficar bem claro com os exemplos)
 
-
-### Função select
-
-Pelo próprio nome, a função **select** serve para você **selecionar apenas variáveis que tem interesse**. Vamos supor que dentre as 16 variáveis, você queira apenas algumas, o que podemos fazer? 
+Para começar, vamos criar um boxplot do variável finance da base que criamos. 
 
 ```{r message=FALSE, warning=FALSE}
 
-gem_selecionados <- gem %>% 
-                      select(code, economy, continente, year, finance, gov_programs)
-
-## você também pode usar o sinal de (-) para manter todas as variáveis, menos aquelas indicadas 
-
-gem_selecionados2 <- gem %>% 
-                      select(-internal_market_dynamics, -physical_infraestruture)
+gem_2019 %>% 
+  ggplot(aes(y=finance)) + geom_boxplot()
 
 
 ```
 
-### Função filter 
-
-A função **filter** permite a **filtragem das observações a partir de algumas condições**. Vamos ver alguns exemplos a seguir. 
-
-1) Filtrar observações do ano de 2015 ou subsequentes  
-2) Filtrar observações de países europeus 
-3) Filtrar observações que sejam de países europeus e maiores que 2013
-4) Filtrar observações que sejam do Brasil ou Chile
+Como eu disse, o ggplot2 possui uma estrutura em camadas! Olha o que acontece se eu trocar o argumento do boxplot por violin.
 
 
 ```{r message=FALSE, warning=FALSE}
 
-# questão 1
-
-gem_filter1 <- gem %>% 
-                  filter(year >= 2015)
-
-## questão 2
-
-gem_filter2 <- gem %>% 
-                  filter(continente == "Europa")
-
-## questão 3 
-## Nesse caso usamos o conectivo e ("&") e ele vai pegar a intersecção das condicionais
-
-gem_filter3 <- gem %>% 
-                  filter(continente == "Europa" & year > 2013)
-
-## questão 4 
-## Nesse caso usamos o contectivo ou ("|") e ele vai pegar o complemento das condicionais
-
-gem_filter4 <- gem %>% 
-                  filter(economy == "Brazil" | economy == "Chile")
-
+gem_2019 %>% 
+  ggplot(aes(x=finance)) + geom_histogram()
 
 ```
 

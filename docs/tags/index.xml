@@ -6,31 +6,40 @@
     <description>Recent content in Tags on Daniel Pagotto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danielppagotto.github.io/blog_Daniel/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>dplyr</title>
-      <link>https://danielppagotto.github.io/blog_Daniel/tags/dplyr/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://danielppagotto.github.io/blog_Daniel/tags/dplyr/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danielppagotto.github.io/blog_Daniel/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GEM</title>
       <link>https://danielppagotto.github.io/blog_Daniel/tags/gem/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://danielppagotto.github.io/blog_Daniel/tags/gem/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>ggplot</title>
+      <link>https://danielppagotto.github.io/blog_Daniel/tags/ggplot/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielppagotto.github.io/blog_Daniel/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tidyverse</title>
       <link>https://danielppagotto.github.io/blog_Daniel/tags/tidyverse/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://danielppagotto.github.io/blog_Daniel/tags/tidyverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dplyr</title>
+      <link>https://danielppagotto.github.io/blog_Daniel/tags/dplyr/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielppagotto.github.io/blog_Daniel/tags/dplyr/</guid>
       <description></description>
     </item>
     
